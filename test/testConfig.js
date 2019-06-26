@@ -4,8 +4,6 @@ var BigNumber = require('bignumber.js');
 
 var Config = async function (accounts) {
 
-    oracleAddresses = accounts.slice(10);
-    console.log(oracleAddresses);
     let testAddresses = [
         "0xC485652B083fBC268FaE28b9c26Bb0CccD761679", 
         "0x01839bE1cCA5D19F223Aa3eFD6794Ec4ddb02e18",
@@ -25,8 +23,8 @@ var Config = async function (accounts) {
     let owner = accounts[0];
     let firstAirline = accounts[1];
 
-    let flightSuretyData = await FlightSuretyData.deployed();
-    let flightSuretyApp = await FlightSuretyApp.deployed();//new(flightSuretyData.address, firstAirline);
+    let flightSuretyData = await FlightSuretyData.new();
+    let flightSuretyApp = await FlightSuretyApp.new(flightSuretyData.address);
 
 
     return {
@@ -34,7 +32,6 @@ var Config = async function (accounts) {
         firstAirline: firstAirline,
         weiMultiple: (new BigNumber(10)).pow(18),
         testAddresses: testAddresses,
-        oracleAddresses: oracleAddresses,
         flightSuretyData: flightSuretyData,
         flightSuretyApp: flightSuretyApp
     }
