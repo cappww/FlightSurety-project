@@ -11,6 +11,9 @@ let AirlineAddresses = [
         "0x5eB9112B0165a3d72490f6e2ACB82484035dED1C"
     ];
 const fs = require('fs');
+const instance = FlightSuretyApp.deployed().then((res)=>{
+    console.log(res.address);
+});
 
 
 module.exports = {

@@ -7,15 +7,17 @@ contract FlightSuretyData {
 
     //DATA VARIABLES
     address private contractOwner;
-    bool private operational;  // Blocks all state changes throughout the contract if false
-    mapping(address => bool) private registeredAirlines;
-    mapping(address => bool) private memberAirlines; //Airlines that are registered and paid ante
-    uint private airlineCount;
 
-    mapping(string => address[]) InsureesFromFlight;
-
-    //EVENT DEFINITIONS
-    event AirlineAdded(address airline);
+    struct Flight {
+        bool isRegistered;
+        uint8 statusCode;
+        uint256 updatedTimestamp;
+        address airline;
+        address[] insuredPassengers;
+        mapping(address => uint) amountsInsured;
+    }
+    mapping(uint => Flight) private flights;
+    mapping(address => uint) pendingWithdrawals;
 
     /**
     * @dev Constructor
@@ -24,89 +26,8 @@ contract FlightSuretyData {
     constructor() public
     {
         contractOwner = msg.sender;
-        operational = true;
-    }
-
-    //FUNCTION MODIFIERS
-    /**
-    * @dev Modifier that requires the "operational" boolean variable to be "true"
-    *      This is used on all state changing functions to pause the contract in
-    *      the event there is an issue that needs to be fixed
-    */
-    modifier requireIsOperational()
-    {
-        require(operational, "Contract is currently not operational");
-        _;
-    }
-
-    /**
-    * @dev Modifier that requires the "ContractOwner" account to be the function caller
-    */
-    modifier requireContractOwner()
-    {
-        require(msg.sender == contractOwner, "Caller is not contract owner");
-        _;
-    }
-
-    //UTILITY FUNCTIONS
-
-    /*
-    function authorizeCaller(address caller) public pure returns(uint, address) {
-        return (100, caller);
-    }
-    */
-
-    /**
-    * @dev Get operating status of contract
-    *
-    * @return A bool that is the current operating status
-    */
-    function isOperational() external view returns(bool)
-    {
-        return operational;
-    }
-
-    function isAirlineRegistered(address airline) external view returns(bool)
-    {
-        return registeredAirlines[airline];
-    }
-
-    function isAntePaid(address airline) external view returns(bool)
-    {
-        require(registeredAirlines[airline], "This address is not a registered airline");
-        return memberAirlines[airline];
-    }
-
-    function getAirlineCount() external view returns(uint) {
-        return airlineCount;
-    }
-
-
-    /**
-    * @dev Sets contract operations on/off
-    *
-    * When operational mode is disabled, all write transactions except for this one will fail
-    */
-    function setOperatingStatus(bool mode) external requireContractOwner
-    {
-        operational = mode;
-    }
-
-    //SMART CONTRACT FUNCTIONS
-   /**
-    * @dev Add an airline to the registration queue
-    *      Can only be called from FlightSuretyApp contract
-    *
-    */
-    function registerAirline(address newAirline)
-        external
-    {
-        registeredAirlines[newAirline] = true;
-        airlineCount++;
-    }
-
-    function payAnte(address newAirline) external {
-        memberAirlines[newAirline] = true;
+        //operational = true;
+        flights[1001] = Flight(true, 10, now, contractOwner, new address[](0));
     }
 
 
@@ -114,58 +35,52 @@ contract FlightSuretyData {
     * @dev Buy insurance for a flight
     *
     */
-    function buy(string calldata flight, address sender) external payable requireIsOperational
+    function buyInsurance(uint flightNum, address sender, uint amount) external payable
     {
-        InsureesFromFlight[flight].push(sender);
+        flights[flightNum].insuredPassengers.push(sender);
+        flights[flightNum].amountsInsured[sender] = amount;
     }
 
     /**
      *  @dev Credits payouts to insurees
     */
-    function creditInsurees(string calldata flight) external view requireIsOperational returns(address[] memory)
+    function creditInsuree(uint flightNum, address passenger) external
     {
-        return InsureesFromFlight[flight];
+        uint amount = flights[flightNum].amountsInsured[passenger];
+        flights[flightNum].amountsInsured[passenger] = 0;
+        pendingWithdrawals[passenger] = (amount + amount/2);
     }
 
-
-    /**
-     *  @dev Transfers eligible payout funds to insuree
-     *
-    */
-    function pay() external view requireIsOperational
-    {
-        0;
+    function getFlightInfo(uint flightNum) public view returns(bool, uint8, uint256, address, address[] memory){
+        return (
+            flights[flightNum].isRegistered,
+            flights[flightNum].statusCode,
+            flights[flightNum].updatedTimestamp,
+            flights[flightNum].airline,
+            flights[flightNum].insuredPassengers
+        );
     }
 
-   /**
-    * @dev Initial funding for the insurance. Unless there are too many delayed flights
-    *      resulting in insurance payouts, the contract should be self-sustaining
-    *
-    */
-    function fund() public payable requireIsOperational
+    function getFlightPassengers(uint flightNum) public view returns(address[] memory)
     {
+        return flights[flightNum].insuredPassengers;
     }
 
-    function getFlightKey
-    (
-        address airline,
-        string memory flight,
-        uint256 timestamp
-    )
-    internal pure returns(bytes32)
+    function getAmountInfo(uint flightNum, address passenger) public view returns(uint)
     {
-        return keccak256(abi.encodePacked(airline, flight, timestamp));
+        return flights[flightNum].amountsInsured[passenger];
     }
 
-    /**
-    * @dev Fallback function for funding smart contract.
-    *
-    */
-    function() external payable
+    function getPendingWithdrawal(address passenger) public view returns(uint)
     {
-        fund();
+        return pendingWithdrawals[passenger];
     }
 
-
+    function withdrawCredit(address sender) external returns(uint)
+    {
+        uint amount = pendingWithdrawals[sender];
+        pendingWithdrawals[sender] = 0;
+        return amount;
+    }
 }
 
