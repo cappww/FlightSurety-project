@@ -12,9 +12,20 @@ let flightSuretyApp = new web3.eth.Contract(FlightSuretyApp.abi, config.appAddre
 
 flightSuretyApp.events.OracleRequest({
     fromBlock: 0
-  }, function (error, event) {
+  }, (error, event) => {
     if (error) console.log(error)
-    console.log(event)
+    else {
+      console.log("request received");
+      let status = Math.floor(Math.random() * 6) * 10;
+      flightSuretyApp.methods.submitOracleResponse(
+        event.returnValues.index,
+        event.returnValues.airline,
+        event.returnValues.flight,
+        event.returnValues.timestamp,
+        status
+      );
+    }
+    //console.log("event:", event)
 });
 
 const app = express();
