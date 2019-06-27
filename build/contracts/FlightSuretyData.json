@@ -174,14 +174,14 @@
     "absolutePath": "/Users/cappwiedenhoefer/udacity_course/FlightSurety-oracles-server/contracts/FlightSuretyData.sol",
     "exportedSymbols": {
       "FlightSuretyData": [
-        589
+        542
       ]
     },
-    "id": 590,
+    "id": 543,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 365,
+        "id": 318,
         "literals": [
           "solidity",
           "^",
@@ -194,10 +194,10 @@
       {
         "absolutePath": "/Users/cappwiedenhoefer/udacity_course/FlightSurety-oracles-server/node_modules/openzeppelin-solidity/contracts/math/SafeMath.sol",
         "file": "../node_modules/openzeppelin-solidity/contracts/math/SafeMath.sol",
-        "id": 366,
+        "id": 319,
         "nodeType": "ImportDirective",
-        "scope": 590,
-        "sourceUnit": 780,
+        "scope": 543,
+        "sourceUnit": 733,
         "src": "25:75:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -208,31 +208,31 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 589,
+        "id": 542,
         "linearizedBaseContracts": [
-          589
+          542
         ],
         "name": "FlightSuretyData",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
-            "id": 369,
+            "id": 322,
             "libraryName": {
               "contractScope": null,
-              "id": 367,
+              "id": 320,
               "name": "SafeMath",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 779,
+              "referencedDeclaration": 732,
               "src": "140:8:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_SafeMath_$779",
+                "typeIdentifier": "t_contract$_SafeMath_$732",
                 "typeString": "library SafeMath"
               }
             },
             "nodeType": "UsingForDirective",
             "src": "134:27:1",
             "typeName": {
-              "id": 368,
+              "id": 321,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "153:7:1",
@@ -244,10 +244,10 @@
           },
           {
             "constant": false,
-            "id": 371,
+            "id": 324,
             "name": "contractOwner",
             "nodeType": "VariableDeclaration",
-            "scope": 589,
+            "scope": 542,
             "src": "188:29:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -256,7 +256,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 370,
+              "id": 323,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "188:7:1",
@@ -271,14 +271,14 @@
           },
           {
             "canonicalName": "FlightSuretyData.Flight",
-            "id": 387,
+            "id": 340,
             "members": [
               {
                 "constant": false,
-                "id": 373,
+                "id": 326,
                 "name": "isRegistered",
                 "nodeType": "VariableDeclaration",
-                "scope": 387,
+                "scope": 340,
                 "src": "248:17:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -287,7 +287,7 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 372,
+                  "id": 325,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
                   "src": "248:4:1",
@@ -301,10 +301,10 @@
               },
               {
                 "constant": false,
-                "id": 375,
+                "id": 328,
                 "name": "statusCode",
                 "nodeType": "VariableDeclaration",
-                "scope": 387,
+                "scope": 340,
                 "src": "275:16:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -313,7 +313,7 @@
                   "typeString": "uint8"
                 },
                 "typeName": {
-                  "id": 374,
+                  "id": 327,
                   "name": "uint8",
                   "nodeType": "ElementaryTypeName",
                   "src": "275:5:1",
@@ -327,10 +327,10 @@
               },
               {
                 "constant": false,
-                "id": 377,
+                "id": 330,
                 "name": "updatedTimestamp",
                 "nodeType": "VariableDeclaration",
-                "scope": 387,
+                "scope": 340,
                 "src": "301:24:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -339,7 +339,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 376,
+                  "id": 329,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "301:7:1",
@@ -353,10 +353,10 @@
               },
               {
                 "constant": false,
-                "id": 379,
+                "id": 332,
                 "name": "airline",
                 "nodeType": "VariableDeclaration",
-                "scope": 387,
+                "scope": 340,
                 "src": "335:15:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -365,7 +365,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 378,
+                  "id": 331,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "335:7:1",
@@ -380,10 +380,10 @@
               },
               {
                 "constant": false,
-                "id": 382,
+                "id": 335,
                 "name": "insuredPassengers",
                 "nodeType": "VariableDeclaration",
-                "scope": 387,
+                "scope": 340,
                 "src": "360:27:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -393,7 +393,7 @@
                 },
                 "typeName": {
                   "baseType": {
-                    "id": 380,
+                    "id": 333,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "360:7:1",
@@ -403,7 +403,7 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 381,
+                  "id": 334,
                   "length": null,
                   "nodeType": "ArrayTypeName",
                   "src": "360:9:1",
@@ -417,10 +417,10 @@
               },
               {
                 "constant": false,
-                "id": 386,
+                "id": 339,
                 "name": "amountsInsured",
                 "nodeType": "VariableDeclaration",
-                "scope": 387,
+                "scope": 340,
                 "src": "397:39:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -429,9 +429,9 @@
                   "typeString": "mapping(address => uint256)"
                 },
                 "typeName": {
-                  "id": 385,
+                  "id": 338,
                   "keyType": {
-                    "id": 383,
+                    "id": 336,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "405:7:1",
@@ -447,7 +447,7 @@
                     "typeString": "mapping(address => uint256)"
                   },
                   "valueType": {
-                    "id": 384,
+                    "id": 337,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "416:4:1",
@@ -463,27 +463,27 @@
             ],
             "name": "Flight",
             "nodeType": "StructDefinition",
-            "scope": 589,
+            "scope": 542,
             "src": "224:219:1",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 391,
+            "id": 344,
             "name": "flights",
             "nodeType": "VariableDeclaration",
-            "scope": 589,
+            "scope": 542,
             "src": "448:39:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$387_storage_$",
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$340_storage_$",
               "typeString": "mapping(uint256 => struct FlightSuretyData.Flight)"
             },
             "typeName": {
-              "id": 390,
+              "id": 343,
               "keyType": {
-                "id": 388,
+                "id": 341,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
                 "src": "456:4:1",
@@ -495,18 +495,18 @@
               "nodeType": "Mapping",
               "src": "448:23:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$387_storage_$",
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$340_storage_$",
                 "typeString": "mapping(uint256 => struct FlightSuretyData.Flight)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 389,
+                "id": 342,
                 "name": "Flight",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 387,
+                "referencedDeclaration": 340,
                 "src": "464:6:1",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Flight_$387_storage_ptr",
+                  "typeIdentifier": "t_struct$_Flight_$340_storage_ptr",
                   "typeString": "struct FlightSuretyData.Flight"
                 }
               }
@@ -516,10 +516,10 @@
           },
           {
             "constant": false,
-            "id": 395,
+            "id": 348,
             "name": "pendingWithdrawals",
             "nodeType": "VariableDeclaration",
-            "scope": 589,
+            "scope": 542,
             "src": "493:43:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -528,9 +528,9 @@
               "typeString": "mapping(address => uint256)"
             },
             "typeName": {
-              "id": 394,
+              "id": 347,
               "keyType": {
-                "id": 392,
+                "id": 345,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "501:7:1",
@@ -546,7 +546,7 @@
                 "typeString": "mapping(address => uint256)"
               },
               "valueType": {
-                "id": 393,
+                "id": 346,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
                 "src": "512:4:1",
@@ -561,25 +561,25 @@
           },
           {
             "body": {
-              "id": 419,
+              "id": 372,
               "nodeType": "Block",
               "src": "661:153:1",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 401,
+                    "id": 354,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 398,
+                      "id": 351,
                       "name": "contractOwner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 371,
+                      "referencedDeclaration": 324,
                       "src": "671:13:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -592,18 +592,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 399,
+                        "id": 352,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 794,
+                        "referencedDeclaration": 747,
                         "src": "687:3:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
                         }
                       },
-                      "id": 400,
+                      "id": 353,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -623,14 +623,14 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 402,
+                  "id": 355,
                   "nodeType": "ExpressionStatement",
                   "src": "671:26:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 417,
+                    "id": 370,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -639,22 +639,22 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 403,
+                        "id": 356,
                         "name": "flights",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 391,
+                        "referencedDeclaration": 344,
                         "src": "737:7:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$387_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$340_storage_$",
                           "typeString": "mapping(uint256 => struct FlightSuretyData.Flight storage ref)"
                         }
                       },
-                      "id": 405,
+                      "id": 358,
                       "indexExpression": {
                         "argumentTypes": null,
                         "hexValue": "31303031",
-                        "id": 404,
+                        "id": 357,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -676,7 +676,7 @@
                       "nodeType": "IndexAccess",
                       "src": "737:13:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Flight_$387_storage",
+                        "typeIdentifier": "t_struct$_Flight_$340_storage",
                         "typeString": "struct FlightSuretyData.Flight storage ref"
                       }
                     },
@@ -688,7 +688,7 @@
                         {
                           "argumentTypes": null,
                           "hexValue": "74727565",
-                          "id": 407,
+                          "id": 360,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -706,7 +706,7 @@
                         {
                           "argumentTypes": null,
                           "hexValue": "3130",
-                          "id": 408,
+                          "id": 361,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -723,11 +723,11 @@
                         },
                         {
                           "argumentTypes": null,
-                          "id": 409,
+                          "id": 362,
                           "name": "now",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 796,
+                          "referencedDeclaration": 749,
                           "src": "770:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -736,11 +736,11 @@
                         },
                         {
                           "argumentTypes": null,
-                          "id": 410,
+                          "id": 363,
                           "name": "contractOwner",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 371,
+                          "referencedDeclaration": 324,
                           "src": "775:13:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -753,7 +753,7 @@
                             {
                               "argumentTypes": null,
                               "hexValue": "30",
-                              "id": 414,
+                              "id": 367,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -776,7 +776,7 @@
                                 "typeString": "int_const 0"
                               }
                             ],
-                            "id": 413,
+                            "id": 366,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -789,7 +789,7 @@
                             },
                             "typeName": {
                               "baseType": {
-                                "id": 411,
+                                "id": 364,
                                 "name": "address",
                                 "nodeType": "ElementaryTypeName",
                                 "src": "794:7:1",
@@ -799,7 +799,7 @@
                                   "typeString": "address"
                                 }
                               },
-                              "id": 412,
+                              "id": 365,
                               "length": null,
                               "nodeType": "ArrayTypeName",
                               "src": "794:9:1",
@@ -809,7 +809,7 @@
                               }
                             }
                           },
-                          "id": 415,
+                          "id": 368,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -847,18 +847,18 @@
                             "typeString": "address[] memory"
                           }
                         ],
-                        "id": 406,
+                        "id": 359,
                         "name": "Flight",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 387,
+                        "referencedDeclaration": 340,
                         "src": "753:6:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_struct$_Flight_$387_storage_ptr_$",
+                          "typeIdentifier": "t_type$_t_struct$_Flight_$340_storage_ptr_$",
                           "typeString": "type(struct FlightSuretyData.Flight storage pointer)"
                         }
                       },
-                      "id": 416,
+                      "id": 369,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -868,42 +868,42 @@
                       "nodeType": "FunctionCall",
                       "src": "753:54:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Flight_$387_memory",
+                        "typeIdentifier": "t_struct$_Flight_$340_memory",
                         "typeString": "struct FlightSuretyData.Flight memory"
                       }
                     },
                     "src": "737:70:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Flight_$387_storage",
+                      "typeIdentifier": "t_struct$_Flight_$340_storage",
                       "typeString": "struct FlightSuretyData.Flight storage ref"
                     }
                   },
-                  "id": 418,
+                  "id": 371,
                   "nodeType": "ExpressionStatement",
                   "src": "737:70:1"
                 }
               ]
             },
             "documentation": "@dev Constructor\n     The deploying account becomes contractOwner",
-            "id": 420,
+            "id": 373,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 396,
+              "id": 349,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "647:2:1"
             },
             "returnParameters": {
-              "id": 397,
+              "id": 350,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "661:0:1"
             },
-            "scope": 589,
+            "scope": 542,
             "src": "636:178:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -911,7 +911,7 @@
           },
           {
             "body": {
-              "id": 446,
+              "id": 399,
               "nodeType": "Block",
               "src": "967:126:1",
               "statements": [
@@ -921,11 +921,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 434,
+                        "id": 387,
                         "name": "sender",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 424,
+                        "referencedDeclaration": 377,
                         "src": "1019:6:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -946,25 +946,25 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 429,
+                            "id": 382,
                             "name": "flights",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 391,
+                            "referencedDeclaration": 344,
                             "src": "977:7:1",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$387_storage_$",
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$340_storage_$",
                               "typeString": "mapping(uint256 => struct FlightSuretyData.Flight storage ref)"
                             }
                           },
-                          "id": 431,
+                          "id": 384,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 430,
+                            "id": 383,
                             "name": "flightNum",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 422,
+                            "referencedDeclaration": 375,
                             "src": "985:9:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -978,25 +978,25 @@
                           "nodeType": "IndexAccess",
                           "src": "977:18:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Flight_$387_storage",
+                            "typeIdentifier": "t_struct$_Flight_$340_storage",
                             "typeString": "struct FlightSuretyData.Flight storage ref"
                           }
                         },
-                        "id": 432,
+                        "id": 385,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "insuredPassengers",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 382,
+                        "referencedDeclaration": 335,
                         "src": "977:36:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_address_$dyn_storage",
                           "typeString": "address[] storage ref"
                         }
                       },
-                      "id": 433,
+                      "id": 386,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1010,7 +1010,7 @@
                         "typeString": "function (address) returns (uint256)"
                       }
                     },
-                    "id": 435,
+                    "id": 388,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1024,14 +1024,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 436,
+                  "id": 389,
                   "nodeType": "ExpressionStatement",
                   "src": "977:49:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 444,
+                    "id": 397,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1044,25 +1044,25 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 437,
+                            "id": 390,
                             "name": "flights",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 391,
+                            "referencedDeclaration": 344,
                             "src": "1036:7:1",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$387_storage_$",
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$340_storage_$",
                               "typeString": "mapping(uint256 => struct FlightSuretyData.Flight storage ref)"
                             }
                           },
-                          "id": 439,
+                          "id": 392,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 438,
+                            "id": 391,
                             "name": "flightNum",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 422,
+                            "referencedDeclaration": 375,
                             "src": "1044:9:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -1076,32 +1076,32 @@
                           "nodeType": "IndexAccess",
                           "src": "1036:18:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Flight_$387_storage",
+                            "typeIdentifier": "t_struct$_Flight_$340_storage",
                             "typeString": "struct FlightSuretyData.Flight storage ref"
                           }
                         },
-                        "id": 440,
+                        "id": 393,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "amountsInsured",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 386,
+                        "referencedDeclaration": 339,
                         "src": "1036:33:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                           "typeString": "mapping(address => uint256)"
                         }
                       },
-                      "id": 442,
+                      "id": 395,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 441,
+                        "id": 394,
                         "name": "sender",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 424,
+                        "referencedDeclaration": 377,
                         "src": "1070:6:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1123,11 +1123,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 443,
+                      "id": 396,
                       "name": "amount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 426,
+                      "referencedDeclaration": 379,
                       "src": "1080:6:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1140,29 +1140,29 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 445,
+                  "id": 398,
                   "nodeType": "ExpressionStatement",
                   "src": "1036:50:1"
                 }
               ]
             },
             "documentation": "@dev Buy insurance for a flight\n    ",
-            "id": 447,
+            "id": 400,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "buyInsurance",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 427,
+              "id": 380,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 422,
+                  "id": 375,
                   "name": "flightNum",
                   "nodeType": "VariableDeclaration",
-                  "scope": 447,
+                  "scope": 400,
                   "src": "901:14:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1171,7 +1171,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 421,
+                    "id": 374,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "901:4:1",
@@ -1185,10 +1185,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 424,
+                  "id": 377,
                   "name": "sender",
                   "nodeType": "VariableDeclaration",
-                  "scope": 447,
+                  "scope": 400,
                   "src": "917:14:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1197,7 +1197,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 423,
+                    "id": 376,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "917:7:1",
@@ -1212,10 +1212,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 426,
+                  "id": 379,
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 447,
+                  "scope": 400,
                   "src": "933:11:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1224,7 +1224,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 425,
+                    "id": 378,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "933:4:1",
@@ -1240,12 +1240,12 @@
               "src": "900:45:1"
             },
             "returnParameters": {
-              "id": 428,
+              "id": 381,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "967:0:1"
             },
-            "scope": 589,
+            "scope": 542,
             "src": "879:214:1",
             "stateMutability": "payable",
             "superFunction": null,
@@ -1253,21 +1253,21 @@
           },
           {
             "body": {
-              "id": 483,
+              "id": 436,
               "nodeType": "Block",
               "src": "1226:194:1",
               "statements": [
                 {
                   "assignments": [
-                    455
+                    408
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 455,
+                      "id": 408,
                       "name": "amount",
                       "nodeType": "VariableDeclaration",
-                      "scope": 483,
+                      "scope": 436,
                       "src": "1236:11:1",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -1276,7 +1276,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 454,
+                        "id": 407,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
                         "src": "1236:4:1",
@@ -1289,7 +1289,7 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 462,
+                  "id": 415,
                   "initialValue": {
                     "argumentTypes": null,
                     "baseExpression": {
@@ -1298,25 +1298,25 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 456,
+                          "id": 409,
                           "name": "flights",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 391,
+                          "referencedDeclaration": 344,
                           "src": "1250:7:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$387_storage_$",
+                            "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$340_storage_$",
                             "typeString": "mapping(uint256 => struct FlightSuretyData.Flight storage ref)"
                           }
                         },
-                        "id": 458,
+                        "id": 411,
                         "indexExpression": {
                           "argumentTypes": null,
-                          "id": 457,
+                          "id": 410,
                           "name": "flightNum",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 449,
+                          "referencedDeclaration": 402,
                           "src": "1258:9:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -1330,32 +1330,32 @@
                         "nodeType": "IndexAccess",
                         "src": "1250:18:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Flight_$387_storage",
+                          "typeIdentifier": "t_struct$_Flight_$340_storage",
                           "typeString": "struct FlightSuretyData.Flight storage ref"
                         }
                       },
-                      "id": 459,
+                      "id": 412,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "amountsInsured",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 386,
+                      "referencedDeclaration": 339,
                       "src": "1250:33:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                         "typeString": "mapping(address => uint256)"
                       }
                     },
-                    "id": 461,
+                    "id": 414,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 460,
+                      "id": 413,
                       "name": "passenger",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 451,
+                      "referencedDeclaration": 404,
                       "src": "1284:9:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -1379,7 +1379,7 @@
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 470,
+                    "id": 423,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1392,25 +1392,25 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 463,
+                            "id": 416,
                             "name": "flights",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 391,
+                            "referencedDeclaration": 344,
                             "src": "1304:7:1",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$387_storage_$",
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$340_storage_$",
                               "typeString": "mapping(uint256 => struct FlightSuretyData.Flight storage ref)"
                             }
                           },
-                          "id": 465,
+                          "id": 418,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 464,
+                            "id": 417,
                             "name": "flightNum",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 449,
+                            "referencedDeclaration": 402,
                             "src": "1312:9:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -1424,32 +1424,32 @@
                           "nodeType": "IndexAccess",
                           "src": "1304:18:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Flight_$387_storage",
+                            "typeIdentifier": "t_struct$_Flight_$340_storage",
                             "typeString": "struct FlightSuretyData.Flight storage ref"
                           }
                         },
-                        "id": 466,
+                        "id": 419,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "amountsInsured",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 386,
+                        "referencedDeclaration": 339,
                         "src": "1304:33:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                           "typeString": "mapping(address => uint256)"
                         }
                       },
-                      "id": 468,
+                      "id": 421,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 467,
+                        "id": 420,
                         "name": "passenger",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 451,
+                        "referencedDeclaration": 404,
                         "src": "1338:9:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1472,7 +1472,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 469,
+                      "id": 422,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1493,14 +1493,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 471,
+                  "id": 424,
                   "nodeType": "ExpressionStatement",
                   "src": "1304:48:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 481,
+                    "id": 434,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1509,25 +1509,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 472,
+                        "id": 425,
                         "name": "pendingWithdrawals",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 395,
+                        "referencedDeclaration": 348,
                         "src": "1362:18:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                           "typeString": "mapping(address => uint256)"
                         }
                       },
-                      "id": 474,
+                      "id": 427,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 473,
+                        "id": 426,
                         "name": "passenger",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 451,
+                        "referencedDeclaration": 404,
                         "src": "1381:9:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1556,18 +1556,18 @@
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           },
-                          "id": 479,
+                          "id": 432,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "leftExpression": {
                             "argumentTypes": null,
-                            "id": 475,
+                            "id": 428,
                             "name": "amount",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 455,
+                            "referencedDeclaration": 408,
                             "src": "1395:6:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -1582,18 +1582,18 @@
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
                             },
-                            "id": 478,
+                            "id": 431,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "leftExpression": {
                               "argumentTypes": null,
-                              "id": 476,
+                              "id": 429,
                               "name": "amount",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 455,
+                              "referencedDeclaration": 408,
                               "src": "1404:6:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -1605,7 +1605,7 @@
                             "rightExpression": {
                               "argumentTypes": null,
                               "hexValue": "32",
-                              "id": 477,
+                              "id": 430,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -1633,7 +1633,7 @@
                           }
                         }
                       ],
-                      "id": 480,
+                      "id": 433,
                       "isConstant": false,
                       "isInlineArray": false,
                       "isLValue": false,
@@ -1652,29 +1652,29 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 482,
+                  "id": 435,
                   "nodeType": "ExpressionStatement",
                   "src": "1362:51:1"
                 }
               ]
             },
             "documentation": " @dev Credits payouts to insurees",
-            "id": 484,
+            "id": 437,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "creditInsuree",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 452,
+              "id": 405,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 449,
+                  "id": 402,
                   "name": "flightNum",
                   "nodeType": "VariableDeclaration",
-                  "scope": 484,
+                  "scope": 437,
                   "src": "1178:14:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1683,7 +1683,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 448,
+                    "id": 401,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1178:4:1",
@@ -1697,10 +1697,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 451,
+                  "id": 404,
                   "name": "passenger",
                   "nodeType": "VariableDeclaration",
-                  "scope": 484,
+                  "scope": 437,
                   "src": "1194:17:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1709,7 +1709,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 450,
+                    "id": 403,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1194:7:1",
@@ -1726,12 +1726,12 @@
               "src": "1177:35:1"
             },
             "returnParameters": {
-              "id": 453,
+              "id": 406,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1226:0:1"
             },
-            "scope": 589,
+            "scope": 542,
             "src": "1155:265:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1739,7 +1739,7 @@
           },
           {
             "body": {
-              "id": 522,
+              "id": 475,
               "nodeType": "Block",
               "src": "1533:261:1",
               "statements": [
@@ -1753,25 +1753,25 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 500,
+                            "id": 453,
                             "name": "flights",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 391,
+                            "referencedDeclaration": 344,
                             "src": "1564:7:1",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$387_storage_$",
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$340_storage_$",
                               "typeString": "mapping(uint256 => struct FlightSuretyData.Flight storage ref)"
                             }
                           },
-                          "id": 502,
+                          "id": 455,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 501,
+                            "id": 454,
                             "name": "flightNum",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 486,
+                            "referencedDeclaration": 439,
                             "src": "1572:9:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -1785,18 +1785,18 @@
                           "nodeType": "IndexAccess",
                           "src": "1564:18:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Flight_$387_storage",
+                            "typeIdentifier": "t_struct$_Flight_$340_storage",
                             "typeString": "struct FlightSuretyData.Flight storage ref"
                           }
                         },
-                        "id": 503,
+                        "id": 456,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "isRegistered",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 373,
+                        "referencedDeclaration": 326,
                         "src": "1564:31:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -1809,25 +1809,25 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 504,
+                            "id": 457,
                             "name": "flights",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 391,
+                            "referencedDeclaration": 344,
                             "src": "1609:7:1",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$387_storage_$",
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$340_storage_$",
                               "typeString": "mapping(uint256 => struct FlightSuretyData.Flight storage ref)"
                             }
                           },
-                          "id": 506,
+                          "id": 459,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 505,
+                            "id": 458,
                             "name": "flightNum",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 486,
+                            "referencedDeclaration": 439,
                             "src": "1617:9:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -1841,18 +1841,18 @@
                           "nodeType": "IndexAccess",
                           "src": "1609:18:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Flight_$387_storage",
+                            "typeIdentifier": "t_struct$_Flight_$340_storage",
                             "typeString": "struct FlightSuretyData.Flight storage ref"
                           }
                         },
-                        "id": 507,
+                        "id": 460,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "statusCode",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 375,
+                        "referencedDeclaration": 328,
                         "src": "1609:29:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint8",
@@ -1865,25 +1865,25 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 508,
+                            "id": 461,
                             "name": "flights",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 391,
+                            "referencedDeclaration": 344,
                             "src": "1652:7:1",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$387_storage_$",
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$340_storage_$",
                               "typeString": "mapping(uint256 => struct FlightSuretyData.Flight storage ref)"
                             }
                           },
-                          "id": 510,
+                          "id": 463,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 509,
+                            "id": 462,
                             "name": "flightNum",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 486,
+                            "referencedDeclaration": 439,
                             "src": "1660:9:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -1897,18 +1897,18 @@
                           "nodeType": "IndexAccess",
                           "src": "1652:18:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Flight_$387_storage",
+                            "typeIdentifier": "t_struct$_Flight_$340_storage",
                             "typeString": "struct FlightSuretyData.Flight storage ref"
                           }
                         },
-                        "id": 511,
+                        "id": 464,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "updatedTimestamp",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 377,
+                        "referencedDeclaration": 330,
                         "src": "1652:35:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1921,25 +1921,25 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 512,
+                            "id": 465,
                             "name": "flights",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 391,
+                            "referencedDeclaration": 344,
                             "src": "1701:7:1",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$387_storage_$",
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$340_storage_$",
                               "typeString": "mapping(uint256 => struct FlightSuretyData.Flight storage ref)"
                             }
                           },
-                          "id": 514,
+                          "id": 467,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 513,
+                            "id": 466,
                             "name": "flightNum",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 486,
+                            "referencedDeclaration": 439,
                             "src": "1709:9:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -1953,18 +1953,18 @@
                           "nodeType": "IndexAccess",
                           "src": "1701:18:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Flight_$387_storage",
+                            "typeIdentifier": "t_struct$_Flight_$340_storage",
                             "typeString": "struct FlightSuretyData.Flight storage ref"
                           }
                         },
-                        "id": 515,
+                        "id": 468,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "airline",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 379,
+                        "referencedDeclaration": 332,
                         "src": "1701:26:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1977,25 +1977,25 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 516,
+                            "id": 469,
                             "name": "flights",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 391,
+                            "referencedDeclaration": 344,
                             "src": "1741:7:1",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$387_storage_$",
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$340_storage_$",
                               "typeString": "mapping(uint256 => struct FlightSuretyData.Flight storage ref)"
                             }
                           },
-                          "id": 518,
+                          "id": 471,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 517,
+                            "id": 470,
                             "name": "flightNum",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 486,
+                            "referencedDeclaration": 439,
                             "src": "1749:9:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -2009,18 +2009,18 @@
                           "nodeType": "IndexAccess",
                           "src": "1741:18:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Flight_$387_storage",
+                            "typeIdentifier": "t_struct$_Flight_$340_storage",
                             "typeString": "struct FlightSuretyData.Flight storage ref"
                           }
                         },
-                        "id": 519,
+                        "id": 472,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "insuredPassengers",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 382,
+                        "referencedDeclaration": 335,
                         "src": "1741:36:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_address_$dyn_storage",
@@ -2028,7 +2028,7 @@
                         }
                       }
                     ],
-                    "id": 520,
+                    "id": 473,
                     "isConstant": false,
                     "isInlineArray": false,
                     "isLValue": false,
@@ -2041,30 +2041,30 @@
                       "typeString": "tuple(bool,uint8,uint256,address,address[] storage ref)"
                     }
                   },
-                  "functionReturnParameters": 499,
-                  "id": 521,
+                  "functionReturnParameters": 452,
+                  "id": 474,
                   "nodeType": "Return",
                   "src": "1543:244:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 523,
+            "id": 476,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getFlightInfo",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 487,
+              "id": 440,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 486,
+                  "id": 439,
                   "name": "flightNum",
                   "nodeType": "VariableDeclaration",
-                  "scope": 523,
+                  "scope": 476,
                   "src": "1449:14:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2073,7 +2073,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 485,
+                    "id": 438,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1449:4:1",
@@ -2089,15 +2089,15 @@
               "src": "1448:16:1"
             },
             "returnParameters": {
-              "id": 499,
+              "id": 452,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 489,
+                  "id": 442,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 523,
+                  "scope": 476,
                   "src": "1485:4:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2106,7 +2106,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 488,
+                    "id": 441,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1485:4:1",
@@ -2120,10 +2120,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 491,
+                  "id": 444,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 523,
+                  "scope": 476,
                   "src": "1491:5:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2132,7 +2132,7 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 490,
+                    "id": 443,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
                     "src": "1491:5:1",
@@ -2146,10 +2146,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 493,
+                  "id": 446,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 523,
+                  "scope": 476,
                   "src": "1498:7:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2158,7 +2158,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 492,
+                    "id": 445,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1498:7:1",
@@ -2172,10 +2172,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 495,
+                  "id": 448,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 523,
+                  "scope": 476,
                   "src": "1507:7:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2184,7 +2184,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 494,
+                    "id": 447,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1507:7:1",
@@ -2199,10 +2199,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 498,
+                  "id": 451,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 523,
+                  "scope": 476,
                   "src": "1516:16:1",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -2212,7 +2212,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 496,
+                      "id": 449,
                       "name": "address",
                       "nodeType": "ElementaryTypeName",
                       "src": "1516:7:1",
@@ -2222,7 +2222,7 @@
                         "typeString": "address"
                       }
                     },
-                    "id": 497,
+                    "id": 450,
                     "length": null,
                     "nodeType": "ArrayTypeName",
                     "src": "1516:9:1",
@@ -2237,7 +2237,7 @@
               ],
               "src": "1484:49:1"
             },
-            "scope": 589,
+            "scope": 542,
             "src": "1426:368:1",
             "stateMutability": "view",
             "superFunction": null,
@@ -2245,7 +2245,7 @@
           },
           {
             "body": {
-              "id": 536,
+              "id": 489,
               "nodeType": "Block",
               "src": "1887:60:1",
               "statements": [
@@ -2256,25 +2256,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 531,
+                        "id": 484,
                         "name": "flights",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 391,
+                        "referencedDeclaration": 344,
                         "src": "1904:7:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$387_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$340_storage_$",
                           "typeString": "mapping(uint256 => struct FlightSuretyData.Flight storage ref)"
                         }
                       },
-                      "id": 533,
+                      "id": 486,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 532,
+                        "id": 485,
                         "name": "flightNum",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 525,
+                        "referencedDeclaration": 478,
                         "src": "1912:9:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2288,48 +2288,48 @@
                       "nodeType": "IndexAccess",
                       "src": "1904:18:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Flight_$387_storage",
+                        "typeIdentifier": "t_struct$_Flight_$340_storage",
                         "typeString": "struct FlightSuretyData.Flight storage ref"
                       }
                     },
-                    "id": 534,
+                    "id": 487,
                     "isConstant": false,
                     "isLValue": true,
                     "isPure": false,
                     "lValueRequested": false,
                     "memberName": "insuredPassengers",
                     "nodeType": "MemberAccess",
-                    "referencedDeclaration": 382,
+                    "referencedDeclaration": 335,
                     "src": "1904:36:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_address_$dyn_storage",
                       "typeString": "address[] storage ref"
                     }
                   },
-                  "functionReturnParameters": 530,
-                  "id": 535,
+                  "functionReturnParameters": 483,
+                  "id": 488,
                   "nodeType": "Return",
                   "src": "1897:43:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 537,
+            "id": 490,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getFlightPassengers",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 526,
+              "id": 479,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 525,
+                  "id": 478,
                   "name": "flightNum",
                   "nodeType": "VariableDeclaration",
-                  "scope": 537,
+                  "scope": 490,
                   "src": "1829:14:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2338,7 +2338,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 524,
+                    "id": 477,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1829:4:1",
@@ -2354,15 +2354,15 @@
               "src": "1828:16:1"
             },
             "returnParameters": {
-              "id": 530,
+              "id": 483,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 529,
+                  "id": 482,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 537,
+                  "scope": 490,
                   "src": "1865:16:1",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -2372,7 +2372,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 527,
+                      "id": 480,
                       "name": "address",
                       "nodeType": "ElementaryTypeName",
                       "src": "1865:7:1",
@@ -2382,7 +2382,7 @@
                         "typeString": "address"
                       }
                     },
-                    "id": 528,
+                    "id": 481,
                     "length": null,
                     "nodeType": "ArrayTypeName",
                     "src": "1865:9:1",
@@ -2397,7 +2397,7 @@
               ],
               "src": "1864:18:1"
             },
-            "scope": 589,
+            "scope": 542,
             "src": "1800:147:1",
             "stateMutability": "view",
             "superFunction": null,
@@ -2405,7 +2405,7 @@
           },
           {
             "body": {
-              "id": 553,
+              "id": 506,
               "nodeType": "Block",
               "src": "2041:68:1",
               "statements": [
@@ -2418,25 +2418,25 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 546,
+                          "id": 499,
                           "name": "flights",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 391,
+                          "referencedDeclaration": 344,
                           "src": "2058:7:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$387_storage_$",
+                            "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$340_storage_$",
                             "typeString": "mapping(uint256 => struct FlightSuretyData.Flight storage ref)"
                           }
                         },
-                        "id": 548,
+                        "id": 501,
                         "indexExpression": {
                           "argumentTypes": null,
-                          "id": 547,
+                          "id": 500,
                           "name": "flightNum",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 539,
+                          "referencedDeclaration": 492,
                           "src": "2066:9:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -2450,32 +2450,32 @@
                         "nodeType": "IndexAccess",
                         "src": "2058:18:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Flight_$387_storage",
+                          "typeIdentifier": "t_struct$_Flight_$340_storage",
                           "typeString": "struct FlightSuretyData.Flight storage ref"
                         }
                       },
-                      "id": 549,
+                      "id": 502,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "amountsInsured",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 386,
+                      "referencedDeclaration": 339,
                       "src": "2058:33:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                         "typeString": "mapping(address => uint256)"
                       }
                     },
-                    "id": 551,
+                    "id": 504,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 550,
+                      "id": 503,
                       "name": "passenger",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 541,
+                      "referencedDeclaration": 494,
                       "src": "2092:9:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -2493,30 +2493,30 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 545,
-                  "id": 552,
+                  "functionReturnParameters": 498,
+                  "id": 505,
                   "nodeType": "Return",
                   "src": "2051:51:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 554,
+            "id": 507,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getAmountInfo",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 542,
+              "id": 495,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 539,
+                  "id": 492,
                   "name": "flightNum",
                   "nodeType": "VariableDeclaration",
-                  "scope": 554,
+                  "scope": 507,
                   "src": "1976:14:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2525,7 +2525,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 538,
+                    "id": 491,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1976:4:1",
@@ -2539,10 +2539,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 541,
+                  "id": 494,
                   "name": "passenger",
                   "nodeType": "VariableDeclaration",
-                  "scope": 554,
+                  "scope": 507,
                   "src": "1992:17:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2551,7 +2551,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 540,
+                    "id": 493,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1992:7:1",
@@ -2568,15 +2568,15 @@
               "src": "1975:35:1"
             },
             "returnParameters": {
-              "id": 545,
+              "id": 498,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 544,
+                  "id": 497,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 554,
+                  "scope": 507,
                   "src": "2031:4:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2585,7 +2585,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 543,
+                    "id": 496,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "2031:4:1",
@@ -2600,7 +2600,7 @@
               ],
               "src": "2030:6:1"
             },
-            "scope": 589,
+            "scope": 542,
             "src": "1953:156:1",
             "stateMutability": "view",
             "superFunction": null,
@@ -2608,7 +2608,7 @@
           },
           {
             "body": {
-              "id": 565,
+              "id": 518,
               "nodeType": "Block",
               "src": "2194:53:1",
               "statements": [
@@ -2617,25 +2617,25 @@
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 561,
+                      "id": 514,
                       "name": "pendingWithdrawals",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 395,
+                      "referencedDeclaration": 348,
                       "src": "2211:18:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                         "typeString": "mapping(address => uint256)"
                       }
                     },
-                    "id": 563,
+                    "id": 516,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 562,
+                      "id": 515,
                       "name": "passenger",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 556,
+                      "referencedDeclaration": 509,
                       "src": "2230:9:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -2653,30 +2653,30 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 560,
-                  "id": 564,
+                  "functionReturnParameters": 513,
+                  "id": 517,
                   "nodeType": "Return",
                   "src": "2204:36:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 566,
+            "id": 519,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getPendingWithdrawal",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 557,
+              "id": 510,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 556,
+                  "id": 509,
                   "name": "passenger",
                   "nodeType": "VariableDeclaration",
-                  "scope": 566,
+                  "scope": 519,
                   "src": "2145:17:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2685,7 +2685,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 555,
+                    "id": 508,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2145:7:1",
@@ -2702,15 +2702,15 @@
               "src": "2144:19:1"
             },
             "returnParameters": {
-              "id": 560,
+              "id": 513,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 559,
+                  "id": 512,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 566,
+                  "scope": 519,
                   "src": "2184:4:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2719,7 +2719,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 558,
+                    "id": 511,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "2184:4:1",
@@ -2734,7 +2734,7 @@
               ],
               "src": "2183:6:1"
             },
-            "scope": 589,
+            "scope": 542,
             "src": "2115:132:1",
             "stateMutability": "view",
             "superFunction": null,
@@ -2742,21 +2742,21 @@
           },
           {
             "body": {
-              "id": 587,
+              "id": 540,
               "nodeType": "Block",
               "src": "2320:120:1",
               "statements": [
                 {
                   "assignments": [
-                    574
+                    527
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 574,
+                      "id": 527,
                       "name": "amount",
                       "nodeType": "VariableDeclaration",
-                      "scope": 587,
+                      "scope": 540,
                       "src": "2330:11:1",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -2765,7 +2765,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 573,
+                        "id": 526,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
                         "src": "2330:4:1",
@@ -2778,30 +2778,30 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 578,
+                  "id": 531,
                   "initialValue": {
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 575,
+                      "id": 528,
                       "name": "pendingWithdrawals",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 395,
+                      "referencedDeclaration": 348,
                       "src": "2344:18:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                         "typeString": "mapping(address => uint256)"
                       }
                     },
-                    "id": 577,
+                    "id": 530,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 576,
+                      "id": 529,
                       "name": "sender",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 568,
+                      "referencedDeclaration": 521,
                       "src": "2363:6:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -2825,7 +2825,7 @@
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 583,
+                    "id": 536,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2834,25 +2834,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 579,
+                        "id": 532,
                         "name": "pendingWithdrawals",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 395,
+                        "referencedDeclaration": 348,
                         "src": "2380:18:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                           "typeString": "mapping(address => uint256)"
                         }
                       },
-                      "id": 581,
+                      "id": 534,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 580,
+                        "id": 533,
                         "name": "sender",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 568,
+                        "referencedDeclaration": 521,
                         "src": "2399:6:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -2875,7 +2875,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 582,
+                      "id": 535,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2896,48 +2896,48 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 584,
+                  "id": 537,
                   "nodeType": "ExpressionStatement",
                   "src": "2380:30:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 585,
+                    "id": 538,
                     "name": "amount",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 574,
+                    "referencedDeclaration": 527,
                     "src": "2427:6:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 572,
-                  "id": 586,
+                  "functionReturnParameters": 525,
+                  "id": 539,
                   "nodeType": "Return",
                   "src": "2420:13:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 588,
+            "id": 541,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "withdrawCredit",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 569,
+              "id": 522,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 568,
+                  "id": 521,
                   "name": "sender",
                   "nodeType": "VariableDeclaration",
-                  "scope": 588,
+                  "scope": 541,
                   "src": "2277:14:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2946,7 +2946,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 567,
+                    "id": 520,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2277:7:1",
@@ -2963,15 +2963,15 @@
               "src": "2276:16:1"
             },
             "returnParameters": {
-              "id": 572,
+              "id": 525,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 571,
+                  "id": 524,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 588,
+                  "scope": 541,
                   "src": "2310:4:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2980,7 +2980,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 570,
+                    "id": 523,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "2310:4:1",
@@ -2995,14 +2995,14 @@
               ],
               "src": "2309:6:1"
             },
-            "scope": 589,
+            "scope": 542,
             "src": "2253:187:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 590,
+        "scope": 543,
         "src": "102:2340:1"
       }
     ],
@@ -3012,14 +3012,14 @@
     "absolutePath": "/Users/cappwiedenhoefer/udacity_course/FlightSurety-oracles-server/contracts/FlightSuretyData.sol",
     "exportedSymbols": {
       "FlightSuretyData": [
-        589
+        542
       ]
     },
-    "id": 590,
+    "id": 543,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 365,
+        "id": 318,
         "literals": [
           "solidity",
           "^",
@@ -3032,10 +3032,10 @@
       {
         "absolutePath": "/Users/cappwiedenhoefer/udacity_course/FlightSurety-oracles-server/node_modules/openzeppelin-solidity/contracts/math/SafeMath.sol",
         "file": "../node_modules/openzeppelin-solidity/contracts/math/SafeMath.sol",
-        "id": 366,
+        "id": 319,
         "nodeType": "ImportDirective",
-        "scope": 590,
-        "sourceUnit": 780,
+        "scope": 543,
+        "sourceUnit": 733,
         "src": "25:75:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -3046,31 +3046,31 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 589,
+        "id": 542,
         "linearizedBaseContracts": [
-          589
+          542
         ],
         "name": "FlightSuretyData",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
-            "id": 369,
+            "id": 322,
             "libraryName": {
               "contractScope": null,
-              "id": 367,
+              "id": 320,
               "name": "SafeMath",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 779,
+              "referencedDeclaration": 732,
               "src": "140:8:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_SafeMath_$779",
+                "typeIdentifier": "t_contract$_SafeMath_$732",
                 "typeString": "library SafeMath"
               }
             },
             "nodeType": "UsingForDirective",
             "src": "134:27:1",
             "typeName": {
-              "id": 368,
+              "id": 321,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "153:7:1",
@@ -3082,10 +3082,10 @@
           },
           {
             "constant": false,
-            "id": 371,
+            "id": 324,
             "name": "contractOwner",
             "nodeType": "VariableDeclaration",
-            "scope": 589,
+            "scope": 542,
             "src": "188:29:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -3094,7 +3094,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 370,
+              "id": 323,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "188:7:1",
@@ -3109,14 +3109,14 @@
           },
           {
             "canonicalName": "FlightSuretyData.Flight",
-            "id": 387,
+            "id": 340,
             "members": [
               {
                 "constant": false,
-                "id": 373,
+                "id": 326,
                 "name": "isRegistered",
                 "nodeType": "VariableDeclaration",
-                "scope": 387,
+                "scope": 340,
                 "src": "248:17:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -3125,7 +3125,7 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 372,
+                  "id": 325,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
                   "src": "248:4:1",
@@ -3139,10 +3139,10 @@
               },
               {
                 "constant": false,
-                "id": 375,
+                "id": 328,
                 "name": "statusCode",
                 "nodeType": "VariableDeclaration",
-                "scope": 387,
+                "scope": 340,
                 "src": "275:16:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -3151,7 +3151,7 @@
                   "typeString": "uint8"
                 },
                 "typeName": {
-                  "id": 374,
+                  "id": 327,
                   "name": "uint8",
                   "nodeType": "ElementaryTypeName",
                   "src": "275:5:1",
@@ -3165,10 +3165,10 @@
               },
               {
                 "constant": false,
-                "id": 377,
+                "id": 330,
                 "name": "updatedTimestamp",
                 "nodeType": "VariableDeclaration",
-                "scope": 387,
+                "scope": 340,
                 "src": "301:24:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -3177,7 +3177,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 376,
+                  "id": 329,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "301:7:1",
@@ -3191,10 +3191,10 @@
               },
               {
                 "constant": false,
-                "id": 379,
+                "id": 332,
                 "name": "airline",
                 "nodeType": "VariableDeclaration",
-                "scope": 387,
+                "scope": 340,
                 "src": "335:15:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -3203,7 +3203,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 378,
+                  "id": 331,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "335:7:1",
@@ -3218,10 +3218,10 @@
               },
               {
                 "constant": false,
-                "id": 382,
+                "id": 335,
                 "name": "insuredPassengers",
                 "nodeType": "VariableDeclaration",
-                "scope": 387,
+                "scope": 340,
                 "src": "360:27:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -3231,7 +3231,7 @@
                 },
                 "typeName": {
                   "baseType": {
-                    "id": 380,
+                    "id": 333,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "360:7:1",
@@ -3241,7 +3241,7 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 381,
+                  "id": 334,
                   "length": null,
                   "nodeType": "ArrayTypeName",
                   "src": "360:9:1",
@@ -3255,10 +3255,10 @@
               },
               {
                 "constant": false,
-                "id": 386,
+                "id": 339,
                 "name": "amountsInsured",
                 "nodeType": "VariableDeclaration",
-                "scope": 387,
+                "scope": 340,
                 "src": "397:39:1",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -3267,9 +3267,9 @@
                   "typeString": "mapping(address => uint256)"
                 },
                 "typeName": {
-                  "id": 385,
+                  "id": 338,
                   "keyType": {
-                    "id": 383,
+                    "id": 336,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "405:7:1",
@@ -3285,7 +3285,7 @@
                     "typeString": "mapping(address => uint256)"
                   },
                   "valueType": {
-                    "id": 384,
+                    "id": 337,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "416:4:1",
@@ -3301,27 +3301,27 @@
             ],
             "name": "Flight",
             "nodeType": "StructDefinition",
-            "scope": 589,
+            "scope": 542,
             "src": "224:219:1",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 391,
+            "id": 344,
             "name": "flights",
             "nodeType": "VariableDeclaration",
-            "scope": 589,
+            "scope": 542,
             "src": "448:39:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$387_storage_$",
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$340_storage_$",
               "typeString": "mapping(uint256 => struct FlightSuretyData.Flight)"
             },
             "typeName": {
-              "id": 390,
+              "id": 343,
               "keyType": {
-                "id": 388,
+                "id": 341,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
                 "src": "456:4:1",
@@ -3333,18 +3333,18 @@
               "nodeType": "Mapping",
               "src": "448:23:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$387_storage_$",
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$340_storage_$",
                 "typeString": "mapping(uint256 => struct FlightSuretyData.Flight)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 389,
+                "id": 342,
                 "name": "Flight",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 387,
+                "referencedDeclaration": 340,
                 "src": "464:6:1",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Flight_$387_storage_ptr",
+                  "typeIdentifier": "t_struct$_Flight_$340_storage_ptr",
                   "typeString": "struct FlightSuretyData.Flight"
                 }
               }
@@ -3354,10 +3354,10 @@
           },
           {
             "constant": false,
-            "id": 395,
+            "id": 348,
             "name": "pendingWithdrawals",
             "nodeType": "VariableDeclaration",
-            "scope": 589,
+            "scope": 542,
             "src": "493:43:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -3366,9 +3366,9 @@
               "typeString": "mapping(address => uint256)"
             },
             "typeName": {
-              "id": 394,
+              "id": 347,
               "keyType": {
-                "id": 392,
+                "id": 345,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "501:7:1",
@@ -3384,7 +3384,7 @@
                 "typeString": "mapping(address => uint256)"
               },
               "valueType": {
-                "id": 393,
+                "id": 346,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
                 "src": "512:4:1",
@@ -3399,25 +3399,25 @@
           },
           {
             "body": {
-              "id": 419,
+              "id": 372,
               "nodeType": "Block",
               "src": "661:153:1",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 401,
+                    "id": 354,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 398,
+                      "id": 351,
                       "name": "contractOwner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 371,
+                      "referencedDeclaration": 324,
                       "src": "671:13:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -3430,18 +3430,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 399,
+                        "id": 352,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 794,
+                        "referencedDeclaration": 747,
                         "src": "687:3:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
                         }
                       },
-                      "id": 400,
+                      "id": 353,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -3461,14 +3461,14 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 402,
+                  "id": 355,
                   "nodeType": "ExpressionStatement",
                   "src": "671:26:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 417,
+                    "id": 370,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3477,22 +3477,22 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 403,
+                        "id": 356,
                         "name": "flights",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 391,
+                        "referencedDeclaration": 344,
                         "src": "737:7:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$387_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$340_storage_$",
                           "typeString": "mapping(uint256 => struct FlightSuretyData.Flight storage ref)"
                         }
                       },
-                      "id": 405,
+                      "id": 358,
                       "indexExpression": {
                         "argumentTypes": null,
                         "hexValue": "31303031",
-                        "id": 404,
+                        "id": 357,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -3514,7 +3514,7 @@
                       "nodeType": "IndexAccess",
                       "src": "737:13:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Flight_$387_storage",
+                        "typeIdentifier": "t_struct$_Flight_$340_storage",
                         "typeString": "struct FlightSuretyData.Flight storage ref"
                       }
                     },
@@ -3526,7 +3526,7 @@
                         {
                           "argumentTypes": null,
                           "hexValue": "74727565",
-                          "id": 407,
+                          "id": 360,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -3544,7 +3544,7 @@
                         {
                           "argumentTypes": null,
                           "hexValue": "3130",
-                          "id": 408,
+                          "id": 361,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -3561,11 +3561,11 @@
                         },
                         {
                           "argumentTypes": null,
-                          "id": 409,
+                          "id": 362,
                           "name": "now",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 796,
+                          "referencedDeclaration": 749,
                           "src": "770:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -3574,11 +3574,11 @@
                         },
                         {
                           "argumentTypes": null,
-                          "id": 410,
+                          "id": 363,
                           "name": "contractOwner",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 371,
+                          "referencedDeclaration": 324,
                           "src": "775:13:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -3591,7 +3591,7 @@
                             {
                               "argumentTypes": null,
                               "hexValue": "30",
-                              "id": 414,
+                              "id": 367,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -3614,7 +3614,7 @@
                                 "typeString": "int_const 0"
                               }
                             ],
-                            "id": 413,
+                            "id": 366,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -3627,7 +3627,7 @@
                             },
                             "typeName": {
                               "baseType": {
-                                "id": 411,
+                                "id": 364,
                                 "name": "address",
                                 "nodeType": "ElementaryTypeName",
                                 "src": "794:7:1",
@@ -3637,7 +3637,7 @@
                                   "typeString": "address"
                                 }
                               },
-                              "id": 412,
+                              "id": 365,
                               "length": null,
                               "nodeType": "ArrayTypeName",
                               "src": "794:9:1",
@@ -3647,7 +3647,7 @@
                               }
                             }
                           },
-                          "id": 415,
+                          "id": 368,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -3685,18 +3685,18 @@
                             "typeString": "address[] memory"
                           }
                         ],
-                        "id": 406,
+                        "id": 359,
                         "name": "Flight",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 387,
+                        "referencedDeclaration": 340,
                         "src": "753:6:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_struct$_Flight_$387_storage_ptr_$",
+                          "typeIdentifier": "t_type$_t_struct$_Flight_$340_storage_ptr_$",
                           "typeString": "type(struct FlightSuretyData.Flight storage pointer)"
                         }
                       },
-                      "id": 416,
+                      "id": 369,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -3706,42 +3706,42 @@
                       "nodeType": "FunctionCall",
                       "src": "753:54:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Flight_$387_memory",
+                        "typeIdentifier": "t_struct$_Flight_$340_memory",
                         "typeString": "struct FlightSuretyData.Flight memory"
                       }
                     },
                     "src": "737:70:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Flight_$387_storage",
+                      "typeIdentifier": "t_struct$_Flight_$340_storage",
                       "typeString": "struct FlightSuretyData.Flight storage ref"
                     }
                   },
-                  "id": 418,
+                  "id": 371,
                   "nodeType": "ExpressionStatement",
                   "src": "737:70:1"
                 }
               ]
             },
             "documentation": "@dev Constructor\n     The deploying account becomes contractOwner",
-            "id": 420,
+            "id": 373,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 396,
+              "id": 349,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "647:2:1"
             },
             "returnParameters": {
-              "id": 397,
+              "id": 350,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "661:0:1"
             },
-            "scope": 589,
+            "scope": 542,
             "src": "636:178:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -3749,7 +3749,7 @@
           },
           {
             "body": {
-              "id": 446,
+              "id": 399,
               "nodeType": "Block",
               "src": "967:126:1",
               "statements": [
@@ -3759,11 +3759,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 434,
+                        "id": 387,
                         "name": "sender",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 424,
+                        "referencedDeclaration": 377,
                         "src": "1019:6:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -3784,25 +3784,25 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 429,
+                            "id": 382,
                             "name": "flights",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 391,
+                            "referencedDeclaration": 344,
                             "src": "977:7:1",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$387_storage_$",
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$340_storage_$",
                               "typeString": "mapping(uint256 => struct FlightSuretyData.Flight storage ref)"
                             }
                           },
-                          "id": 431,
+                          "id": 384,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 430,
+                            "id": 383,
                             "name": "flightNum",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 422,
+                            "referencedDeclaration": 375,
                             "src": "985:9:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -3816,25 +3816,25 @@
                           "nodeType": "IndexAccess",
                           "src": "977:18:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Flight_$387_storage",
+                            "typeIdentifier": "t_struct$_Flight_$340_storage",
                             "typeString": "struct FlightSuretyData.Flight storage ref"
                           }
                         },
-                        "id": 432,
+                        "id": 385,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "insuredPassengers",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 382,
+                        "referencedDeclaration": 335,
                         "src": "977:36:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_address_$dyn_storage",
                           "typeString": "address[] storage ref"
                         }
                       },
-                      "id": 433,
+                      "id": 386,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -3848,7 +3848,7 @@
                         "typeString": "function (address) returns (uint256)"
                       }
                     },
-                    "id": 435,
+                    "id": 388,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3862,14 +3862,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 436,
+                  "id": 389,
                   "nodeType": "ExpressionStatement",
                   "src": "977:49:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 444,
+                    "id": 397,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3882,25 +3882,25 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 437,
+                            "id": 390,
                             "name": "flights",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 391,
+                            "referencedDeclaration": 344,
                             "src": "1036:7:1",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$387_storage_$",
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$340_storage_$",
                               "typeString": "mapping(uint256 => struct FlightSuretyData.Flight storage ref)"
                             }
                           },
-                          "id": 439,
+                          "id": 392,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 438,
+                            "id": 391,
                             "name": "flightNum",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 422,
+                            "referencedDeclaration": 375,
                             "src": "1044:9:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -3914,32 +3914,32 @@
                           "nodeType": "IndexAccess",
                           "src": "1036:18:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Flight_$387_storage",
+                            "typeIdentifier": "t_struct$_Flight_$340_storage",
                             "typeString": "struct FlightSuretyData.Flight storage ref"
                           }
                         },
-                        "id": 440,
+                        "id": 393,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "amountsInsured",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 386,
+                        "referencedDeclaration": 339,
                         "src": "1036:33:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                           "typeString": "mapping(address => uint256)"
                         }
                       },
-                      "id": 442,
+                      "id": 395,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 441,
+                        "id": 394,
                         "name": "sender",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 424,
+                        "referencedDeclaration": 377,
                         "src": "1070:6:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -3961,11 +3961,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 443,
+                      "id": 396,
                       "name": "amount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 426,
+                      "referencedDeclaration": 379,
                       "src": "1080:6:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3978,29 +3978,29 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 445,
+                  "id": 398,
                   "nodeType": "ExpressionStatement",
                   "src": "1036:50:1"
                 }
               ]
             },
             "documentation": "@dev Buy insurance for a flight\n    ",
-            "id": 447,
+            "id": 400,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "buyInsurance",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 427,
+              "id": 380,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 422,
+                  "id": 375,
                   "name": "flightNum",
                   "nodeType": "VariableDeclaration",
-                  "scope": 447,
+                  "scope": 400,
                   "src": "901:14:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4009,7 +4009,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 421,
+                    "id": 374,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "901:4:1",
@@ -4023,10 +4023,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 424,
+                  "id": 377,
                   "name": "sender",
                   "nodeType": "VariableDeclaration",
-                  "scope": 447,
+                  "scope": 400,
                   "src": "917:14:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4035,7 +4035,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 423,
+                    "id": 376,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "917:7:1",
@@ -4050,10 +4050,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 426,
+                  "id": 379,
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 447,
+                  "scope": 400,
                   "src": "933:11:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4062,7 +4062,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 425,
+                    "id": 378,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "933:4:1",
@@ -4078,12 +4078,12 @@
               "src": "900:45:1"
             },
             "returnParameters": {
-              "id": 428,
+              "id": 381,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "967:0:1"
             },
-            "scope": 589,
+            "scope": 542,
             "src": "879:214:1",
             "stateMutability": "payable",
             "superFunction": null,
@@ -4091,21 +4091,21 @@
           },
           {
             "body": {
-              "id": 483,
+              "id": 436,
               "nodeType": "Block",
               "src": "1226:194:1",
               "statements": [
                 {
                   "assignments": [
-                    455
+                    408
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 455,
+                      "id": 408,
                       "name": "amount",
                       "nodeType": "VariableDeclaration",
-                      "scope": 483,
+                      "scope": 436,
                       "src": "1236:11:1",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -4114,7 +4114,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 454,
+                        "id": 407,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
                         "src": "1236:4:1",
@@ -4127,7 +4127,7 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 462,
+                  "id": 415,
                   "initialValue": {
                     "argumentTypes": null,
                     "baseExpression": {
@@ -4136,25 +4136,25 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 456,
+                          "id": 409,
                           "name": "flights",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 391,
+                          "referencedDeclaration": 344,
                           "src": "1250:7:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$387_storage_$",
+                            "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$340_storage_$",
                             "typeString": "mapping(uint256 => struct FlightSuretyData.Flight storage ref)"
                           }
                         },
-                        "id": 458,
+                        "id": 411,
                         "indexExpression": {
                           "argumentTypes": null,
-                          "id": 457,
+                          "id": 410,
                           "name": "flightNum",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 449,
+                          "referencedDeclaration": 402,
                           "src": "1258:9:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -4168,32 +4168,32 @@
                         "nodeType": "IndexAccess",
                         "src": "1250:18:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Flight_$387_storage",
+                          "typeIdentifier": "t_struct$_Flight_$340_storage",
                           "typeString": "struct FlightSuretyData.Flight storage ref"
                         }
                       },
-                      "id": 459,
+                      "id": 412,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "amountsInsured",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 386,
+                      "referencedDeclaration": 339,
                       "src": "1250:33:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                         "typeString": "mapping(address => uint256)"
                       }
                     },
-                    "id": 461,
+                    "id": 414,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 460,
+                      "id": 413,
                       "name": "passenger",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 451,
+                      "referencedDeclaration": 404,
                       "src": "1284:9:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -4217,7 +4217,7 @@
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 470,
+                    "id": 423,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4230,25 +4230,25 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 463,
+                            "id": 416,
                             "name": "flights",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 391,
+                            "referencedDeclaration": 344,
                             "src": "1304:7:1",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$387_storage_$",
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$340_storage_$",
                               "typeString": "mapping(uint256 => struct FlightSuretyData.Flight storage ref)"
                             }
                           },
-                          "id": 465,
+                          "id": 418,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 464,
+                            "id": 417,
                             "name": "flightNum",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 449,
+                            "referencedDeclaration": 402,
                             "src": "1312:9:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -4262,32 +4262,32 @@
                           "nodeType": "IndexAccess",
                           "src": "1304:18:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Flight_$387_storage",
+                            "typeIdentifier": "t_struct$_Flight_$340_storage",
                             "typeString": "struct FlightSuretyData.Flight storage ref"
                           }
                         },
-                        "id": 466,
+                        "id": 419,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "amountsInsured",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 386,
+                        "referencedDeclaration": 339,
                         "src": "1304:33:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                           "typeString": "mapping(address => uint256)"
                         }
                       },
-                      "id": 468,
+                      "id": 421,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 467,
+                        "id": 420,
                         "name": "passenger",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 451,
+                        "referencedDeclaration": 404,
                         "src": "1338:9:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -4310,7 +4310,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 469,
+                      "id": 422,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -4331,14 +4331,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 471,
+                  "id": 424,
                   "nodeType": "ExpressionStatement",
                   "src": "1304:48:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 481,
+                    "id": 434,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4347,25 +4347,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 472,
+                        "id": 425,
                         "name": "pendingWithdrawals",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 395,
+                        "referencedDeclaration": 348,
                         "src": "1362:18:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                           "typeString": "mapping(address => uint256)"
                         }
                       },
-                      "id": 474,
+                      "id": 427,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 473,
+                        "id": 426,
                         "name": "passenger",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 451,
+                        "referencedDeclaration": 404,
                         "src": "1381:9:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -4394,18 +4394,18 @@
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           },
-                          "id": 479,
+                          "id": 432,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "leftExpression": {
                             "argumentTypes": null,
-                            "id": 475,
+                            "id": 428,
                             "name": "amount",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 455,
+                            "referencedDeclaration": 408,
                             "src": "1395:6:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -4420,18 +4420,18 @@
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
                             },
-                            "id": 478,
+                            "id": 431,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "leftExpression": {
                               "argumentTypes": null,
-                              "id": 476,
+                              "id": 429,
                               "name": "amount",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 455,
+                              "referencedDeclaration": 408,
                               "src": "1404:6:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -4443,7 +4443,7 @@
                             "rightExpression": {
                               "argumentTypes": null,
                               "hexValue": "32",
-                              "id": 477,
+                              "id": 430,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -4471,7 +4471,7 @@
                           }
                         }
                       ],
-                      "id": 480,
+                      "id": 433,
                       "isConstant": false,
                       "isInlineArray": false,
                       "isLValue": false,
@@ -4490,29 +4490,29 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 482,
+                  "id": 435,
                   "nodeType": "ExpressionStatement",
                   "src": "1362:51:1"
                 }
               ]
             },
             "documentation": " @dev Credits payouts to insurees",
-            "id": 484,
+            "id": 437,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "creditInsuree",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 452,
+              "id": 405,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 449,
+                  "id": 402,
                   "name": "flightNum",
                   "nodeType": "VariableDeclaration",
-                  "scope": 484,
+                  "scope": 437,
                   "src": "1178:14:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4521,7 +4521,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 448,
+                    "id": 401,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1178:4:1",
@@ -4535,10 +4535,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 451,
+                  "id": 404,
                   "name": "passenger",
                   "nodeType": "VariableDeclaration",
-                  "scope": 484,
+                  "scope": 437,
                   "src": "1194:17:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4547,7 +4547,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 450,
+                    "id": 403,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1194:7:1",
@@ -4564,12 +4564,12 @@
               "src": "1177:35:1"
             },
             "returnParameters": {
-              "id": 453,
+              "id": 406,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1226:0:1"
             },
-            "scope": 589,
+            "scope": 542,
             "src": "1155:265:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -4577,7 +4577,7 @@
           },
           {
             "body": {
-              "id": 522,
+              "id": 475,
               "nodeType": "Block",
               "src": "1533:261:1",
               "statements": [
@@ -4591,25 +4591,25 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 500,
+                            "id": 453,
                             "name": "flights",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 391,
+                            "referencedDeclaration": 344,
                             "src": "1564:7:1",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$387_storage_$",
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$340_storage_$",
                               "typeString": "mapping(uint256 => struct FlightSuretyData.Flight storage ref)"
                             }
                           },
-                          "id": 502,
+                          "id": 455,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 501,
+                            "id": 454,
                             "name": "flightNum",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 486,
+                            "referencedDeclaration": 439,
                             "src": "1572:9:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -4623,18 +4623,18 @@
                           "nodeType": "IndexAccess",
                           "src": "1564:18:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Flight_$387_storage",
+                            "typeIdentifier": "t_struct$_Flight_$340_storage",
                             "typeString": "struct FlightSuretyData.Flight storage ref"
                           }
                         },
-                        "id": 503,
+                        "id": 456,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "isRegistered",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 373,
+                        "referencedDeclaration": 326,
                         "src": "1564:31:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -4647,25 +4647,25 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 504,
+                            "id": 457,
                             "name": "flights",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 391,
+                            "referencedDeclaration": 344,
                             "src": "1609:7:1",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$387_storage_$",
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$340_storage_$",
                               "typeString": "mapping(uint256 => struct FlightSuretyData.Flight storage ref)"
                             }
                           },
-                          "id": 506,
+                          "id": 459,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 505,
+                            "id": 458,
                             "name": "flightNum",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 486,
+                            "referencedDeclaration": 439,
                             "src": "1617:9:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -4679,18 +4679,18 @@
                           "nodeType": "IndexAccess",
                           "src": "1609:18:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Flight_$387_storage",
+                            "typeIdentifier": "t_struct$_Flight_$340_storage",
                             "typeString": "struct FlightSuretyData.Flight storage ref"
                           }
                         },
-                        "id": 507,
+                        "id": 460,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "statusCode",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 375,
+                        "referencedDeclaration": 328,
                         "src": "1609:29:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint8",
@@ -4703,25 +4703,25 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 508,
+                            "id": 461,
                             "name": "flights",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 391,
+                            "referencedDeclaration": 344,
                             "src": "1652:7:1",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$387_storage_$",
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$340_storage_$",
                               "typeString": "mapping(uint256 => struct FlightSuretyData.Flight storage ref)"
                             }
                           },
-                          "id": 510,
+                          "id": 463,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 509,
+                            "id": 462,
                             "name": "flightNum",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 486,
+                            "referencedDeclaration": 439,
                             "src": "1660:9:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -4735,18 +4735,18 @@
                           "nodeType": "IndexAccess",
                           "src": "1652:18:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Flight_$387_storage",
+                            "typeIdentifier": "t_struct$_Flight_$340_storage",
                             "typeString": "struct FlightSuretyData.Flight storage ref"
                           }
                         },
-                        "id": 511,
+                        "id": 464,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "updatedTimestamp",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 377,
+                        "referencedDeclaration": 330,
                         "src": "1652:35:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -4759,25 +4759,25 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 512,
+                            "id": 465,
                             "name": "flights",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 391,
+                            "referencedDeclaration": 344,
                             "src": "1701:7:1",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$387_storage_$",
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$340_storage_$",
                               "typeString": "mapping(uint256 => struct FlightSuretyData.Flight storage ref)"
                             }
                           },
-                          "id": 514,
+                          "id": 467,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 513,
+                            "id": 466,
                             "name": "flightNum",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 486,
+                            "referencedDeclaration": 439,
                             "src": "1709:9:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -4791,18 +4791,18 @@
                           "nodeType": "IndexAccess",
                           "src": "1701:18:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Flight_$387_storage",
+                            "typeIdentifier": "t_struct$_Flight_$340_storage",
                             "typeString": "struct FlightSuretyData.Flight storage ref"
                           }
                         },
-                        "id": 515,
+                        "id": 468,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "airline",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 379,
+                        "referencedDeclaration": 332,
                         "src": "1701:26:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -4815,25 +4815,25 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 516,
+                            "id": 469,
                             "name": "flights",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 391,
+                            "referencedDeclaration": 344,
                             "src": "1741:7:1",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$387_storage_$",
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$340_storage_$",
                               "typeString": "mapping(uint256 => struct FlightSuretyData.Flight storage ref)"
                             }
                           },
-                          "id": 518,
+                          "id": 471,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 517,
+                            "id": 470,
                             "name": "flightNum",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 486,
+                            "referencedDeclaration": 439,
                             "src": "1749:9:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -4847,18 +4847,18 @@
                           "nodeType": "IndexAccess",
                           "src": "1741:18:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Flight_$387_storage",
+                            "typeIdentifier": "t_struct$_Flight_$340_storage",
                             "typeString": "struct FlightSuretyData.Flight storage ref"
                           }
                         },
-                        "id": 519,
+                        "id": 472,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "insuredPassengers",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 382,
+                        "referencedDeclaration": 335,
                         "src": "1741:36:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_address_$dyn_storage",
@@ -4866,7 +4866,7 @@
                         }
                       }
                     ],
-                    "id": 520,
+                    "id": 473,
                     "isConstant": false,
                     "isInlineArray": false,
                     "isLValue": false,
@@ -4879,30 +4879,30 @@
                       "typeString": "tuple(bool,uint8,uint256,address,address[] storage ref)"
                     }
                   },
-                  "functionReturnParameters": 499,
-                  "id": 521,
+                  "functionReturnParameters": 452,
+                  "id": 474,
                   "nodeType": "Return",
                   "src": "1543:244:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 523,
+            "id": 476,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getFlightInfo",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 487,
+              "id": 440,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 486,
+                  "id": 439,
                   "name": "flightNum",
                   "nodeType": "VariableDeclaration",
-                  "scope": 523,
+                  "scope": 476,
                   "src": "1449:14:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4911,7 +4911,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 485,
+                    "id": 438,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1449:4:1",
@@ -4927,15 +4927,15 @@
               "src": "1448:16:1"
             },
             "returnParameters": {
-              "id": 499,
+              "id": 452,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 489,
+                  "id": 442,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 523,
+                  "scope": 476,
                   "src": "1485:4:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4944,7 +4944,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 488,
+                    "id": 441,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1485:4:1",
@@ -4958,10 +4958,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 491,
+                  "id": 444,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 523,
+                  "scope": 476,
                   "src": "1491:5:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4970,7 +4970,7 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 490,
+                    "id": 443,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
                     "src": "1491:5:1",
@@ -4984,10 +4984,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 493,
+                  "id": 446,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 523,
+                  "scope": 476,
                   "src": "1498:7:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4996,7 +4996,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 492,
+                    "id": 445,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1498:7:1",
@@ -5010,10 +5010,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 495,
+                  "id": 448,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 523,
+                  "scope": 476,
                   "src": "1507:7:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5022,7 +5022,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 494,
+                    "id": 447,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1507:7:1",
@@ -5037,10 +5037,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 498,
+                  "id": 451,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 523,
+                  "scope": 476,
                   "src": "1516:16:1",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -5050,7 +5050,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 496,
+                      "id": 449,
                       "name": "address",
                       "nodeType": "ElementaryTypeName",
                       "src": "1516:7:1",
@@ -5060,7 +5060,7 @@
                         "typeString": "address"
                       }
                     },
-                    "id": 497,
+                    "id": 450,
                     "length": null,
                     "nodeType": "ArrayTypeName",
                     "src": "1516:9:1",
@@ -5075,7 +5075,7 @@
               ],
               "src": "1484:49:1"
             },
-            "scope": 589,
+            "scope": 542,
             "src": "1426:368:1",
             "stateMutability": "view",
             "superFunction": null,
@@ -5083,7 +5083,7 @@
           },
           {
             "body": {
-              "id": 536,
+              "id": 489,
               "nodeType": "Block",
               "src": "1887:60:1",
               "statements": [
@@ -5094,25 +5094,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 531,
+                        "id": 484,
                         "name": "flights",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 391,
+                        "referencedDeclaration": 344,
                         "src": "1904:7:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$387_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$340_storage_$",
                           "typeString": "mapping(uint256 => struct FlightSuretyData.Flight storage ref)"
                         }
                       },
-                      "id": 533,
+                      "id": 486,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 532,
+                        "id": 485,
                         "name": "flightNum",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 525,
+                        "referencedDeclaration": 478,
                         "src": "1912:9:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -5126,48 +5126,48 @@
                       "nodeType": "IndexAccess",
                       "src": "1904:18:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Flight_$387_storage",
+                        "typeIdentifier": "t_struct$_Flight_$340_storage",
                         "typeString": "struct FlightSuretyData.Flight storage ref"
                       }
                     },
-                    "id": 534,
+                    "id": 487,
                     "isConstant": false,
                     "isLValue": true,
                     "isPure": false,
                     "lValueRequested": false,
                     "memberName": "insuredPassengers",
                     "nodeType": "MemberAccess",
-                    "referencedDeclaration": 382,
+                    "referencedDeclaration": 335,
                     "src": "1904:36:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_address_$dyn_storage",
                       "typeString": "address[] storage ref"
                     }
                   },
-                  "functionReturnParameters": 530,
-                  "id": 535,
+                  "functionReturnParameters": 483,
+                  "id": 488,
                   "nodeType": "Return",
                   "src": "1897:43:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 537,
+            "id": 490,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getFlightPassengers",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 526,
+              "id": 479,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 525,
+                  "id": 478,
                   "name": "flightNum",
                   "nodeType": "VariableDeclaration",
-                  "scope": 537,
+                  "scope": 490,
                   "src": "1829:14:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5176,7 +5176,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 524,
+                    "id": 477,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1829:4:1",
@@ -5192,15 +5192,15 @@
               "src": "1828:16:1"
             },
             "returnParameters": {
-              "id": 530,
+              "id": 483,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 529,
+                  "id": 482,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 537,
+                  "scope": 490,
                   "src": "1865:16:1",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -5210,7 +5210,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 527,
+                      "id": 480,
                       "name": "address",
                       "nodeType": "ElementaryTypeName",
                       "src": "1865:7:1",
@@ -5220,7 +5220,7 @@
                         "typeString": "address"
                       }
                     },
-                    "id": 528,
+                    "id": 481,
                     "length": null,
                     "nodeType": "ArrayTypeName",
                     "src": "1865:9:1",
@@ -5235,7 +5235,7 @@
               ],
               "src": "1864:18:1"
             },
-            "scope": 589,
+            "scope": 542,
             "src": "1800:147:1",
             "stateMutability": "view",
             "superFunction": null,
@@ -5243,7 +5243,7 @@
           },
           {
             "body": {
-              "id": 553,
+              "id": 506,
               "nodeType": "Block",
               "src": "2041:68:1",
               "statements": [
@@ -5256,25 +5256,25 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 546,
+                          "id": 499,
                           "name": "flights",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 391,
+                          "referencedDeclaration": 344,
                           "src": "2058:7:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$387_storage_$",
+                            "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Flight_$340_storage_$",
                             "typeString": "mapping(uint256 => struct FlightSuretyData.Flight storage ref)"
                           }
                         },
-                        "id": 548,
+                        "id": 501,
                         "indexExpression": {
                           "argumentTypes": null,
-                          "id": 547,
+                          "id": 500,
                           "name": "flightNum",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 539,
+                          "referencedDeclaration": 492,
                           "src": "2066:9:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -5288,32 +5288,32 @@
                         "nodeType": "IndexAccess",
                         "src": "2058:18:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Flight_$387_storage",
+                          "typeIdentifier": "t_struct$_Flight_$340_storage",
                           "typeString": "struct FlightSuretyData.Flight storage ref"
                         }
                       },
-                      "id": 549,
+                      "id": 502,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "amountsInsured",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 386,
+                      "referencedDeclaration": 339,
                       "src": "2058:33:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                         "typeString": "mapping(address => uint256)"
                       }
                     },
-                    "id": 551,
+                    "id": 504,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 550,
+                      "id": 503,
                       "name": "passenger",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 541,
+                      "referencedDeclaration": 494,
                       "src": "2092:9:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -5331,30 +5331,30 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 545,
-                  "id": 552,
+                  "functionReturnParameters": 498,
+                  "id": 505,
                   "nodeType": "Return",
                   "src": "2051:51:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 554,
+            "id": 507,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getAmountInfo",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 542,
+              "id": 495,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 539,
+                  "id": 492,
                   "name": "flightNum",
                   "nodeType": "VariableDeclaration",
-                  "scope": 554,
+                  "scope": 507,
                   "src": "1976:14:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5363,7 +5363,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 538,
+                    "id": 491,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1976:4:1",
@@ -5377,10 +5377,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 541,
+                  "id": 494,
                   "name": "passenger",
                   "nodeType": "VariableDeclaration",
-                  "scope": 554,
+                  "scope": 507,
                   "src": "1992:17:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5389,7 +5389,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 540,
+                    "id": 493,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1992:7:1",
@@ -5406,15 +5406,15 @@
               "src": "1975:35:1"
             },
             "returnParameters": {
-              "id": 545,
+              "id": 498,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 544,
+                  "id": 497,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 554,
+                  "scope": 507,
                   "src": "2031:4:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5423,7 +5423,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 543,
+                    "id": 496,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "2031:4:1",
@@ -5438,7 +5438,7 @@
               ],
               "src": "2030:6:1"
             },
-            "scope": 589,
+            "scope": 542,
             "src": "1953:156:1",
             "stateMutability": "view",
             "superFunction": null,
@@ -5446,7 +5446,7 @@
           },
           {
             "body": {
-              "id": 565,
+              "id": 518,
               "nodeType": "Block",
               "src": "2194:53:1",
               "statements": [
@@ -5455,25 +5455,25 @@
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 561,
+                      "id": 514,
                       "name": "pendingWithdrawals",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 395,
+                      "referencedDeclaration": 348,
                       "src": "2211:18:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                         "typeString": "mapping(address => uint256)"
                       }
                     },
-                    "id": 563,
+                    "id": 516,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 562,
+                      "id": 515,
                       "name": "passenger",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 556,
+                      "referencedDeclaration": 509,
                       "src": "2230:9:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -5491,30 +5491,30 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 560,
-                  "id": 564,
+                  "functionReturnParameters": 513,
+                  "id": 517,
                   "nodeType": "Return",
                   "src": "2204:36:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 566,
+            "id": 519,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getPendingWithdrawal",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 557,
+              "id": 510,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 556,
+                  "id": 509,
                   "name": "passenger",
                   "nodeType": "VariableDeclaration",
-                  "scope": 566,
+                  "scope": 519,
                   "src": "2145:17:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5523,7 +5523,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 555,
+                    "id": 508,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2145:7:1",
@@ -5540,15 +5540,15 @@
               "src": "2144:19:1"
             },
             "returnParameters": {
-              "id": 560,
+              "id": 513,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 559,
+                  "id": 512,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 566,
+                  "scope": 519,
                   "src": "2184:4:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5557,7 +5557,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 558,
+                    "id": 511,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "2184:4:1",
@@ -5572,7 +5572,7 @@
               ],
               "src": "2183:6:1"
             },
-            "scope": 589,
+            "scope": 542,
             "src": "2115:132:1",
             "stateMutability": "view",
             "superFunction": null,
@@ -5580,21 +5580,21 @@
           },
           {
             "body": {
-              "id": 587,
+              "id": 540,
               "nodeType": "Block",
               "src": "2320:120:1",
               "statements": [
                 {
                   "assignments": [
-                    574
+                    527
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 574,
+                      "id": 527,
                       "name": "amount",
                       "nodeType": "VariableDeclaration",
-                      "scope": 587,
+                      "scope": 540,
                       "src": "2330:11:1",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -5603,7 +5603,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 573,
+                        "id": 526,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
                         "src": "2330:4:1",
@@ -5616,30 +5616,30 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 578,
+                  "id": 531,
                   "initialValue": {
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 575,
+                      "id": 528,
                       "name": "pendingWithdrawals",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 395,
+                      "referencedDeclaration": 348,
                       "src": "2344:18:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                         "typeString": "mapping(address => uint256)"
                       }
                     },
-                    "id": 577,
+                    "id": 530,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 576,
+                      "id": 529,
                       "name": "sender",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 568,
+                      "referencedDeclaration": 521,
                       "src": "2363:6:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -5663,7 +5663,7 @@
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 583,
+                    "id": 536,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -5672,25 +5672,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 579,
+                        "id": 532,
                         "name": "pendingWithdrawals",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 395,
+                        "referencedDeclaration": 348,
                         "src": "2380:18:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                           "typeString": "mapping(address => uint256)"
                         }
                       },
-                      "id": 581,
+                      "id": 534,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 580,
+                        "id": 533,
                         "name": "sender",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 568,
+                        "referencedDeclaration": 521,
                         "src": "2399:6:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -5713,7 +5713,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 582,
+                      "id": 535,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -5734,48 +5734,48 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 584,
+                  "id": 537,
                   "nodeType": "ExpressionStatement",
                   "src": "2380:30:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 585,
+                    "id": 538,
                     "name": "amount",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 574,
+                    "referencedDeclaration": 527,
                     "src": "2427:6:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 572,
-                  "id": 586,
+                  "functionReturnParameters": 525,
+                  "id": 539,
                   "nodeType": "Return",
                   "src": "2420:13:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 588,
+            "id": 541,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "withdrawCredit",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 569,
+              "id": 522,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 568,
+                  "id": 521,
                   "name": "sender",
                   "nodeType": "VariableDeclaration",
-                  "scope": 588,
+                  "scope": 541,
                   "src": "2277:14:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5784,7 +5784,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 567,
+                    "id": 520,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2277:7:1",
@@ -5801,15 +5801,15 @@
               "src": "2276:16:1"
             },
             "returnParameters": {
-              "id": 572,
+              "id": 525,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 571,
+                  "id": 524,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 588,
+                  "scope": 541,
                   "src": "2310:4:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5818,7 +5818,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 570,
+                    "id": 523,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "2310:4:1",
@@ -5833,14 +5833,14 @@
               ],
               "src": "2309:6:1"
             },
-            "scope": 589,
+            "scope": 542,
             "src": "2253:187:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 590,
+        "scope": 543,
         "src": "102:2340:1"
       }
     ],
@@ -5859,7 +5859,7 @@
     }
   },
   "schemaVersion": "3.0.10",
-  "updatedAt": "2019-06-25T23:07:29.597Z",
+  "updatedAt": "2019-06-27T19:08:33.538Z",
   "devdoc": {
     "methods": {
       "buyInsurance(uint256,address,uint256)": {

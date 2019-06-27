@@ -123,9 +123,5 @@ contract FlightSuretyApp {
 
 //Contract Data Interface
 contract FlightSuretyData {
-    function buyInsurance(uint, address, uint) external;
-    function getFlightInfo(uint) public view returns(bool, uint8, uint256, address, address[] memory);
-    function getFlightPassengers(uint) public view returns(address[] memory);
-    function creditInsuree(uint, address) external;
-    function withdrawCredit(address sender) external returns(uint);
+    
 }

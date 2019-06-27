@@ -27,9 +27,12 @@ contract('Flight Surety Tests', async (accounts) => {
         let timestamp = 0;
 
         await truffleAssert.eventEmitted(test, 'OracleRequest', async (ev) => {
-            console.log()
             index = ev.index;
+            let airline = ev.airline;
+            let flightNum = ev.flight;
             timestamp = ev.timestamp;
+
+            console.log(index, airline, flight, timestamp);
         });
 
         
