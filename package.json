@@ -11,8 +11,7 @@
     "dapp": "webpack-dev-server --mode development --config webpack.config.dapp.js",
     "dapp:prod": "webpack --mode production  --config webpack.config.dapp.js",
     "server": "rm -rf ./build/server && webpack --config webpack.config.server.js",
-    "dev": "npm run server & npm run dapp",
-    "test:console": "truffle migrate --reset && pbcopy < ./test/setup.txt && (pbpaste | truffle console)"
+    "dev": "npm run server & npm run dapp"
   },
   "author": "",
   "license": "ISC",
