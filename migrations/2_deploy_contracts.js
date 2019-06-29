@@ -27,10 +27,6 @@ const oracles = [
     '0x736C589d68204ed004f1E02Ba3312Aa1D0439E29']
 
 module.exports = async(deployer) => {
-<<<<<<< HEAD
-    await deployer.deploy(FlightSuretyData);
-    await deployer.deploy(FlightSuretyApp, FlightSuretyData.address);
-=======
 
     let firstAirline = '0x01839bE1cCA5D19F223Aa3eFD6794Ec4ddb02e18';
     await deployer.deploy(FlightSuretyData);
@@ -43,7 +39,6 @@ module.exports = async(deployer) => {
         await flightApp.registerOracle({ from: oracle, value: web3.utils.toWei('1', 'ether') });
         console.log(oracle, await flightApp.getMyIndexes({ from: oracle }));
     }
->>>>>>> 2e6b335e50c65125d848bf214e2025679b84d99e
     
            
     let config = {
