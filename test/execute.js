@@ -1,4 +1,10 @@
 const truffleAssert = require('truffle-assertions');
+const Web3 = require('web3');
+Config = require('../src/server/config.json')
+let config = Config['localhost'];
+let web3 = new Web3(new Web3.providers.WebsocketProvider(config.url.replace('http', 'ws')));
+web3.eth.defaultAccount = web3.eth.accounts[0];
+
 
 
 module.exports = async (callback) => {
@@ -6,16 +12,12 @@ module.exports = async (callback) => {
     const FlightSuretyApp = artifacts.require("FlightSuretyApp");
     let instance = await FlightSuretyApp.deployed();
 
-    try {
-        let test = await instance.fetchFlightStatus(airline, 1001, Date.now());
-        //truffleAssert.prettyPrintEmittedEvents(test);
-        let event = await instance.contract.events.OracleReport();
 
-        console.log(event);
-
-    } catch (error) {
-        console.log(error)
-    }
+    //await instance.submitOracleResponse(
+    //    0, airline, 1004, Date.now(), 50
+   // )
+    await instance.fetchFlightStatus(airline, 1005, Date.now());
+    //truffleAssert.prettyPrintEmittedEvents(test);
     
     
     callback();

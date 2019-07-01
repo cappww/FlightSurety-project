@@ -68,14 +68,14 @@ contract FlightSuretyApp {
     )
     external
     {
-        require(
-            (oracles[msg.sender].indexes[0] == index) ||
-            (oracles[msg.sender].indexes[1] == index) ||
-            (oracles[msg.sender].indexes[2] == index),
-            "Index does not match oracle request"
-        );
+        // require(
+        //     (oracles[msg.sender].indexes[0] == index) ||
+        //     (oracles[msg.sender].indexes[1] == index) ||
+        //     (oracles[msg.sender].indexes[2] == index),
+        //     "Index does not match oracle request"
+        // );
         bytes32 key = keccak256(abi.encodePacked(index, airline, flight, timestamp));
-        require(oracleResponses[key].isOpen, "Flight or timestamp do not match oracle request");
+        //require(oracleResponses[key].isOpen, "Flight or timestamp do not match oracle request");
         oracleResponses[key].responses[statusCode].push(msg.sender);
         // Information isn't considered verified until at least MIN_RESPONSES
         // oracles respond with the *** same *** information
@@ -103,7 +103,7 @@ contract FlightSuretyApp {
     (
         address account
     )
-    internal returns (uint8)
+    public returns (uint8)
     {
         uint8 maxValue = 10;
 
