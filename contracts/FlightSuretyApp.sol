@@ -46,7 +46,7 @@ contract FlightSuretyApp {
         uint flightNum,
         uint timestamp
     )
-        external
+        external returns(address)
     {
         uint8 index = getRandomIndex(msg.sender);
         // Generate a unique key for storing the request
@@ -56,6 +56,7 @@ contract FlightSuretyApp {
             isOpen: true
         });
         emit OracleRequest(index, airline, flightNum, timestamp);
+        return msg.sender;
     }
 
     function submitOracleResponse
@@ -66,7 +67,7 @@ contract FlightSuretyApp {
         uint256 timestamp,
         uint8 statusCode
     )
-    external
+    external returns (uint)
     {
         // require(
         //     (oracles[msg.sender].indexes[0] == index) ||
@@ -85,6 +86,7 @@ contract FlightSuretyApp {
             // Handle flight status as appropriate
             processFlightStatus(airline, flight, timestamp, statusCode);
         }
+        return 500;
     }
 
     function processFlightStatus
