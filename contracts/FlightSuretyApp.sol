@@ -28,6 +28,7 @@ contract FlightSuretyApp is OracleManager {
     internal
     {
         flightSuretyData.setFlightStatus(flight, timestamp, statusCode);
+        //TODO: If the status is deplayed due to airline, call the creditInsurees function
     }
 }
 
