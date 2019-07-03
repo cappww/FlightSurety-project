@@ -5859,7 +5859,7 @@
     }
   },
   "schemaVersion": "3.0.10",
-  "updatedAt": "2019-07-03T21:43:18.698Z",
+  "updatedAt": "2019-07-03T23:19:14.177Z",
   "devdoc": {
     "methods": {
       "buyInsurance(uint256,address,uint256)": {

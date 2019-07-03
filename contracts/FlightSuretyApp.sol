@@ -25,6 +25,11 @@ contract FlightSuretyApp is PassengerManager {
         flightSuretyData = FlightSuretyData(dataContract);
     }
 
+    function isOperational() external pure returns(bool)
+    {
+        return true;
+    }
+
     function getContractOwner() internal view returns(address payable)
     {
         return contractOwner;

@@ -1,12 +1,17 @@
 import DOM from './dom';
-import Contract from './contract';
 import './flightsurety.css';
 const db = require('../server/db.json');
+
+const FlightSuretyApp = require('../../build/contracts/FlightSuretyApp.json');
+const Config = require('./config.json');
+const Web3 = require('web3');
 
 
 (async() => {
 
-    let result = null;
+    let config = Config['localhost'];
+    let web3 = new Web3(new Web3.providers.WebsocketProvider(config.url.replace('http', 'ws')));
+    const flightSuretyApp = web3.eth.Contract(FlightSuretyApp.abi, config.appAddress);
 
     let selector = DOM.elid("flight-selector");
     let section = DOM.section();
@@ -20,29 +25,21 @@ const db = require('../server/db.json');
     section.append(button);
     selector.append(section);
 
-    let contract = new Contract('localhost', () => {
-        
-        // Read transaction
-        contract.isOperational((error, result) => {
-            console.log("error: ", error, "result: ", result);
-            display('Operational Status', 'Check if contract is operational', [ { label: 'Operational Status', error: error, value: result} ]);
-        });
+    let passenger = '0x667F2761d1030c473729fAe340C2A343663c2459';
 
-        // User-submitted transaction
-        DOM.elid('submit-oracle').addEventListener('click', () => {
-            let flight = DOM.elid('flight-number').value;
-            // Write transaction
-            contract.fetchFlightStatus(flight, (error, result) => {
-                display('Oracles', 'Trigger oracles', [ { label: 'Fetch Flight Status', error: error, value: result.flight + ' ' + result.timestamp} ]);
-            });
-        })
+    //console.log(flightSuretyApp.methods.isOperational())
+    let isOperational = await flightSuretyApp.methods.isOperational().call({from: passenger});
+    console.log("isOperational:" , isOperational);
+    display('Operational Status', 'Check if contract is operational', [{ label: 'Operational Status', value: isOperational}]);
 
-        button.addEventListener('click', () => {
-            //contract.
-        })
+    DOM.elid('submit-oracle').addEventListener('click', () => {
+        let flight = DOM.elid('flight-number').value;
+        // Write transaction
 
+        console.log("clicked!!");
+        //TODO: Call fetch flight status
+    })
 
-    });
 })();
 
 
@@ -60,10 +57,3 @@ function display(title, description, results) {
     displayDiv.append(section);
 
 }
-
-
-
-
-
-
-
