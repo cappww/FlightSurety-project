@@ -2,16 +2,15 @@ const FlightSuretyApp = require('../../build/contracts/FlightSuretyApp.json');
 const Web3 = require('web3');
 const Config = require('./config.json');
 const express = require('express');
-const contract = require('truffle-contract');
-const truffleAssertions = require('truffle-assertions')
 const port = 3000;
 
 let config = Config['localhost'];
 let web3 = new Web3(new Web3.providers.WebsocketProvider(config.url));
 web3.eth.defaultAccount = web3.eth.accounts[0];
+let oracles = require('./oracle-indices.json');
+//console.log(oracles);
 
 let airline = '0x01839bE1cCA5D19F223Aa3eFD6794Ec4ddb02e18';
-let oracle = '0x5eB9112B0165a3d72490f6e2ACB82484035dED1C';
 
 class Server {
     constructor() {
@@ -24,7 +23,7 @@ class Server {
 
     watchOracleReport(){
         this.flightSuretyApp.events.OracleReport(
-            { fromBlock: 0 },
+            { fromBlock: 'latest' },
             async (err, ev) => {
                 if(err) console.log(err);
                 else {
@@ -42,7 +41,7 @@ class Server {
 
     watchOracleRequest(){
         this.flightSuretyApp.events.OracleRequest(
-            { fromBlock: 0 }, 
+            { fromBlock: 'latest' }, 
             async (err, ev) => {
                 if(err) console.log(err);
                 else {
@@ -53,14 +52,25 @@ class Server {
                         ev.returnValues.flight, "\n ",
                         ev.returnValues.timestamp, "\n ",
                     )
+                    let index = ev.returnValues.index;
                     let status = Math.floor(Math.random() * 6) * 10;
-                    await this.flightSuretyApp.methods.submitOracleResponse(
-                        ev.returnValues.index,
-                        ev.returnValues.airline,
-                        ev.returnValues.flight,
-                        ev.returnValues.timestamp,
-                        status
-                    ).send({from: oracle});
+
+                    for (const address in oracles) {
+                        if (oracles.hasOwnProperty(address)) {
+                            const indices = oracles[address];
+                            for (const oracleIndex of indices) {
+                                if(oracleIndex === index){
+                                    this.flightSuretyApp.methods.submitOracleResponse(
+                                        ev.returnValues.index,
+                                        ev.returnValues.airline,
+                                        ev.returnValues.flight,
+                                        ev.returnValues.timestamp,
+                                        status
+                                    ).send({from: address});
+                                }
+                            }
+                        }
+                    }
                 }
             }
         )

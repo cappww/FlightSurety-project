@@ -33,13 +33,18 @@ module.exports = async(deployer) => {
     await deployer.deploy(FlightSuretyApp, FlightSuretyData.address);
 
     // Loop through oracles, add each one to the deployed app
-    // let flightApp = await FlightSuretyApp.deployed();
-    // console.log("Oracles");
-    // for (let i = 0; i < oracles.length; i++) {
-    //     const oracle = oracles[i];
-    //     await flightApp.registerOracle({ from: oracle, value: web3.utils.toWei('1', 'ether') });
-    //     console.log(oracle, await flightApp.getMyIndexes({ from: oracle }));
-    // }
+    let instance = await FlightSuretyApp.deployed();
+    let oracleIndices = {};
+    console.log("Oracles");
+    for (let i = 0; i < oracles.length; i++) {
+        const oracle = oracles[i];
+        await instance.registerOracle({ from: oracle, value: web3.utils.toWei('1', 'ether') });
+        let indices = await instance.getMyIndexes({ from: oracle })
+        console.log(oracle, indices);
+        oracleIndices[oracle] = [indices[0].toNumber(), indices[1].toNumber(), indices[2].toNumber()];
+    }
+
+    fs.writeFileSync(__dirname + '/../src/server/oracle-indices.json', JSON.stringify(oracleIndices, null, '\t'), 'utf-8');
     
            
     let config = {
