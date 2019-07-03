@@ -121,7 +121,6 @@ contract OracleManager {
             // Handle flight status as appropriate
             processFlightStatus(airline, flight, timestamp, statusCode);
         }
-        return 500;
     }
 
     function processFlightStatus
@@ -130,11 +129,7 @@ contract OracleManager {
         uint flight,
         uint256 timestamp,
         uint8 statusCode
-    )
-    internal pure
-    {
-        1+1;
-    }
+    ) internal;
 
     function getRandomIndex
     (

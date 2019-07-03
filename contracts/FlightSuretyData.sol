@@ -30,6 +30,11 @@ contract FlightSuretyData {
         flights[1001] = Flight(true, 10, now, contractOwner, new address[](0));
     }
 
+    function setFlightStatus(uint flight, uint256 timestamp, uint8 status) external
+    {
+        flights[flight].updatedTimestamp = timestamp;
+        flights[flight].statusCode = status;
+    }
 
    /**
     * @dev Buy insurance for a flight

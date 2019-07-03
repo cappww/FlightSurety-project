@@ -17,8 +17,21 @@ contract FlightSuretyApp is OracleManager {
         contractOwner = msg.sender;
         flightSuretyData = FlightSuretyData(dataContract);
     }
+
+    function processFlightStatus
+    (
+        address airline,
+        uint flight,
+        uint256 timestamp,
+        uint8 statusCode
+    )
+    internal
+    {
+        flightSuretyData.setFlightStatus(flight, timestamp, statusCode);
+    }
 }
 
 //Contract Data Interface
 contract FlightSuretyData {
+    function setFlightStatus(uint, uint256, uint8) external;
 }

@@ -16,9 +16,28 @@ class Server {
     constructor() {
         this.flightSuretyApp = web3.eth.Contract(FlightSuretyApp.abi, config.appAddress);
         this.app = express();
+        this.watchFlightStatusInfo();
         this.watchOracleReport();
         this.watchOracleRequest();
         this.startServer();
+    }
+
+    watchFlightStatusInfo() {
+        this.flightSuretyApp.events.FlightStatusInfo(
+            {fromBlock: 'latest'},
+            async (err, ev) => {
+                if(err) console.log(err);
+                else {
+                    console.log(
+                        "FlightStatusInfo\n ",
+                        ev.returnValues.airline, "\n ",
+                        ev.returnValues.flight.toNumber(), "\n ",
+                        ev.returnValues.timestamp.toNumber(), "\n ",
+                        ev.returnValues.status, "\n"
+                    )
+                }
+            }
+        );
     }
 
     watchOracleReport(){
@@ -30,9 +49,9 @@ class Server {
                     console.log(
                         "OracleReport\n ",
                         ev.returnValues.airline, "\n ",
-                        ev.returnValues.flight, "\n ",
-                        ev.returnValues.timestamp, "\n ",
-                        ev.returnValues.status,
+                        ev.returnValues.flight.toNumber(), "\n ",
+                        ev.returnValues.timestamp.toNumber(), "\n ",
+                        ev.returnValues.status, "\n"
                     )
                 }
             }
@@ -49,8 +68,8 @@ class Server {
                         "OracleRequest\n ",
                         ev.returnValues.index, "\n ",
                         ev.returnValues.airline, "\n ",
-                        ev.returnValues.flight, "\n ",
-                        ev.returnValues.timestamp, "\n ",
+                        ev.returnValues.flight.toNumber(), "\n ",
+                        ev.returnValues.timestamp.toNumber(), "\n ",
                     )
                     let index = ev.returnValues.index;
                     let status = Math.floor(Math.random() * 6) * 10;
