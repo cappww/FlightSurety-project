@@ -20,7 +20,28 @@
     </nav>
 
     <main class="container" id="main">
-        <div id="flight-selector"></div>
+        <div id="flight-selector">
+            <section>
+                <h2>Select Flight</h2>
+                <h5>Select a flight to insure</h5>
+                <div class="insure-options" style="margin-left: 3em">
+                    <div>
+                        <h6>Flight:</h6>
+                        <select id="selector" style="margin-left: 4em">
+                            
+                        </select>
+                    </div>
+                    <div>
+                        <h6>Ether:</h6>
+                        <input id="cost" type="range" min="0" max="1" step="0.01" style="margin-left: 4em">
+                        <label id="lbl">0.5</label>
+                        
+                    </div>
+                    <btn class="btn btn-primary">Insure Flight</btn>
+                </div>
+               
+            </section>
+        </div>
         <div id="display-wrapper" class="top-20"></div>
         <div class="row top-20">
             <label class="form">Flight</label> <input type="text" id="flight-number">

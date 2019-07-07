@@ -37,10 +37,5 @@ contract('Flight Surety Tests', async (accounts) => {
         //console.log(contractAddress);
         let balance = await web3.eth.getBalance(contractAddress);
         //console.log(web3.utils.fromWei(balance, 'ether'), 'ether');
-
-    });
-
-
-
-    
+    });    
 });

@@ -27,7 +27,7 @@ contract FlightSuretyData {
     {
         contractOwner = msg.sender;
         //operational = true;
-        flights[1001] = Flight(true, 10, now, contractOwner, new address[](0));
+        //flights[1001] = Flight(true, 10, now, contractOwner, new address[](0));
     }
 
 
@@ -81,6 +81,11 @@ contract FlightSuretyData {
         uint amount = pendingWithdrawals[sender];
         pendingWithdrawals[sender] = 0;
         return amount;
+    }
+
+    //This is a function used for testing the passengers contracts
+    function registerFlight(uint flightNum) public {
+        flights[flightNum] = Flight(true, 0, now, msg.sender, new address[](0));
     }
 }
 
