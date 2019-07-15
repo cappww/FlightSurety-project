@@ -17,7 +17,7 @@ module.exports = async (callback) => {
     //    0, airline, 1004, Date.now(), 50
    // )
     await instance.fetchFlightStatus(airline, 1005, Date.now());
-    //truffleAssert.prettyPrintEmittedEvents(test);
+    truffleAssert.prettyPrintEmittedEvents(test);
     
     
     callback();
