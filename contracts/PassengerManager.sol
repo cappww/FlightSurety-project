@@ -5,8 +5,8 @@ import "../node_modules/openzeppelin-solidity/contracts/math/SafeMath.sol";
 contract PassengerManager {
     using SafeMath for uint256;
 
-    function getContractOwner() internal view returns(address payable);
-    function getFlightSuretyData() internal view returns(FlightSuretyData);
+    function getContractOwner() public view returns(address payable);
+    function getFlightSuretyData() public view returns(FlightSuretyData);
 
     function buyInsurance(uint flightNum) external payable
     {
@@ -27,6 +27,11 @@ contract PassengerManager {
     {
         uint amount = getFlightSuretyData().withdrawCredit(msg.sender);
         msg.sender.transfer(amount);
+    }
+
+    function getFlightInfo(uint flightNum) public view returns(bool, uint8, uint256, address, address[] memory)
+    {
+        return getFlightSuretyData().getFlightInfo(flightNum);
     }
 
     function() external payable {}

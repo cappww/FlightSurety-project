@@ -1,25 +1,23 @@
 import DOM from './dom';
 import './flightsurety.css';
-const db = require('../server/db.json');
 
 const FlightSuretyApp = require('../../build/contracts/FlightSuretyApp.json');
 const Config = require('./config.json');
 const Web3 = require('web3');
+const db = require('../server/db.json'); 
+let config = Config['localhost'];
+let web3 = new Web3(new Web3.providers.WebsocketProvider(config.url.replace('http', 'ws')));
+const flightSuretyApp = web3.eth.Contract(FlightSuretyApp.abi, config.appAddress);
 
 
 (async() => {
 
-    let config = Config['localhost'];
-    let web3 = new Web3(new Web3.providers.WebsocketProvider(config.url.replace('http', 'ws')));
-    const flightSuretyApp = web3.eth.Contract(FlightSuretyApp.abi, config.appAddress);
-
     let selector = DOM.elid("selector");
+    let flights = db.flights;
+    flights.forEach(flight => {
+        selector.append(DOM.option(flight.toString()));
+    });
     
-    //Get the registered flights from the blockchain
-    //For each one, list them in the selector
-
-
-
     let lbl = document.getElementById("lbl");
     let etherRange = document.getElementById("cost");
     etherRange.oninput = async () => {
@@ -27,6 +25,18 @@ const Web3 = require('web3');
     }
 
     let passenger = '0x667F2761d1030c473729fAe340C2A343663c2459';
+
+    DOM.elid('insure-flight').addEventListener('click', async() => {
+        
+        //TODO: change the from value to whomever is calling the function (metamask??)
+        flightSuretyApp.methods.buyInsurance(Number(selector.value)).send({
+            from: passenger, 
+            value: web3.utils.toWei(etherRange.value, "ether"),
+            gas: 6721975
+        });
+        
+    });
+    
 
     //console.log(flightSuretyApp.methods.isOperational())
     let isOperational = await flightSuretyApp.methods.isOperational().call({from: passenger});

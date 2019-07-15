@@ -30,12 +30,12 @@ contract FlightSuretyApp is PassengerManager {
         return true;
     }
 
-    function getContractOwner() internal view returns(address payable)
+    function getContractOwner() public view returns(address payable)
     {
         return contractOwner;
     }
 
-    function getFlightSuretyData() internal view returns(FlightSuretyData)
+    function getFlightSuretyData() public view returns(FlightSuretyData)
     {
         return flightSuretyData;
     }

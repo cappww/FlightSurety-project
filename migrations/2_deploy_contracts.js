@@ -8,6 +8,7 @@ const db = require('../src/server/db.json')
 
 module.exports = async(deployer) => {
     await deployer.deploy(FlightSuretyData);
+    console.log(FlightSuretyData.address);
     await deployer.deploy(FlightSuretyApp, FlightSuretyData.address);
 
     //Flights would be registered from the AirlineManager Contract
