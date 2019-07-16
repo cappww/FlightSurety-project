@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>FlightSurety</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">FlightSurety</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+    <main class="container" id="main">
+        <div id="display-wrapper" class="top-20"></div>
+        <div id="flight-selector">
+            <section>
+                <h2>Insure Flight</h2>
+                <h5>Select a flight to insure</h5>
+                <div class="insure-options" style="margin-left: 3em">
+                    <div>
+                        <h6>Flight:</h6>
+                        <select id="selector" style="margin-left: 4em"></select>
+                    </div>
+                    <div>
+                        <h6>Ether:</h6>
+                        <input id="cost" type="range" min="0" max="1" step="0.01" style="margin-left: 4em">
+                        <label id="lbl">0.5</label>
+                        
+                    </div>
+                    <btn id="insure-flight" class="btn btn-primary">Insure Flight</btn>
+                </div>
+            </section>
+        </div>
+        <div id="flight-status">
+            <h2>Flight Status</h2>
+            <h5>Fetch a flight's status</h5>
+            <select id="status-selector" style="margin-left: 3em"></select>
+            <btn class="btn btn-primary" id="submit-oracle" style="margin-left: 3em">Submit to Oracles</btn>
+        </div>
+    </main>
+
+</body>
+
+</html>

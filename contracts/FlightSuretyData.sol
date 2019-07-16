@@ -85,5 +85,10 @@ contract FlightSuretyData {
         pendingWithdrawals[sender] = 0;
         return amount;
     }
+
+    //This is a function used for testing the passengers contracts
+    function registerFlight(uint flightNum) public {
+        flights[flightNum] = Flight(true, 0, now, msg.sender, new address[](0));
+    }
 }
 
