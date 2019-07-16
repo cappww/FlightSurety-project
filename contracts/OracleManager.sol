@@ -27,11 +27,6 @@ contract OracleManager {
     event OracleReport(address airline, uint flight, uint256 timestamp, uint8 status);
     event FlightStatusInfo(address airline, uint flight, uint256 timestamp, uint8 status);
 
-    constructor() public
-    {
-
-    }
-
     function generateIndexes
     (
         address account
