@@ -68,7 +68,6 @@ let web3Provider = null;
         }]
     );
     
-
     DOM.elid('insure-flight').addEventListener('click', async() => {
         flightSuretyApp.methods.buyInsurance(Number(selector.value)).send({
             from: await getMetaMaskID(),
