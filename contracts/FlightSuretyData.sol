@@ -26,8 +26,6 @@ contract FlightSuretyData {
     constructor() public
     {
         contractOwner = msg.sender;
-        //operational = true;
-        //flights[1001] = Flight(true, 10, now, contractOwner, new address[](0));
     }
 
 
