@@ -39,5 +39,4 @@ contract FlightSuretyApp is PassengerManager {
     {
         return flightSuretyData;
     }
-
 }

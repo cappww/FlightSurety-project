@@ -5,6 +5,9 @@ import "../node_modules/openzeppelin-solidity/contracts/math/SafeMath.sol";
 contract PassengerManager {
     using SafeMath for uint256;
 
+    //fake events
+    event FlightStatusInfo(address airline, uint flight, uint256 timestamp, uint8 status);
+
     function getContractOwner() public view returns(address payable);
     function getFlightSuretyData() public view returns(FlightSuretyData);
 
@@ -32,6 +35,17 @@ contract PassengerManager {
     function getFlightInfo(uint flightNum) public view returns(bool, uint8, uint256, address, address[] memory)
     {
         return getFlightSuretyData().getFlightInfo(flightNum);
+    }
+
+    //This is a fake function, the real one is located in Oracle Manager
+    function fetchFlightStatus
+    (
+        address airline,
+        uint flight,
+        uint timestamp
+    ) external
+    {
+        emit FlightStatusInfo(airline, flight, timestamp, 20);
     }
 
     function() external payable {}

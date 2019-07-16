@@ -20,7 +20,6 @@ module.exports = async(deployer) => {
     });
 
     
-           
     let config = {
         localhost: {
             url: 'http://localhost:7545',
@@ -28,8 +27,8 @@ module.exports = async(deployer) => {
             appAddress: FlightSuretyApp.address
         }
     }
-    fs.writeFileSync(__dirname + '/../src/dapp/config.json',JSON.stringify(config, null, '\t'), 'utf-8');
-    fs.writeFileSync(__dirname + '/../src/server/config.json',JSON.stringify(config, null, '\t'), 'utf-8');
+    fs.writeFileSync(__dirname + '/../src/dapp/config.json', JSON.stringify(config, null, '\t'), 'utf-8');
+    fs.writeFileSync(__dirname + '/../src/server/config.json', JSON.stringify(config, null, '\t'), 'utf-8');
            
    
 }

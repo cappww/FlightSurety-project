@@ -12,12 +12,16 @@ const flightSuretyApp = web3.eth.Contract(FlightSuretyApp.abi, config.appAddress
 
 (async() => {
 
+    //Adds each flight number into the options of the selector
     let selector = DOM.elid("selector");
+    let statusSel = DOM.elid("status-selector");
     let flights = db.flights;
     flights.forEach(flight => {
         selector.append(DOM.option(flight.toString()));
+        statusSel.append(DOM.option(flight.toString()));
     });
     
+    //Provides the range for the amount of ether being insured
     let lbl = document.getElementById("lbl");
     let etherRange = document.getElementById("cost");
     etherRange.oninput = async () => {
@@ -25,6 +29,15 @@ const flightSuretyApp = web3.eth.Contract(FlightSuretyApp.abi, config.appAddress
     }
 
     let passenger = '0x667F2761d1030c473729fAe340C2A343663c2459';
+
+    let isOperational = await flightSuretyApp.methods.isOperational().call({ from: passenger });
+    console.log("isOperational:", isOperational);
+    display('Operational Status', 'Check if contract is operational',
+        [{
+            label: 'Operational Status',
+            value: isOperational
+        }]
+    );
 
     DOM.elid('insure-flight').addEventListener('click', async() => {
         
@@ -36,26 +49,56 @@ const flightSuretyApp = web3.eth.Contract(FlightSuretyApp.abi, config.appAddress
         });
         
     });
-    
 
-    //console.log(flightSuretyApp.methods.isOperational())
-    let isOperational = await flightSuretyApp.methods.isOperational().call({from: passenger});
-    console.log("isOperational:" , isOperational);
-    display('Operational Status', 'Check if contract is operational', 
-        [{ 
-            label: 'Operational Status', 
-            value: isOperational
-        }]
-    );
+    let airline = '0x01839bE1cCA5D19F223Aa3eFD6794Ec4ddb02e18';
 
     DOM.elid('submit-oracle').addEventListener('click', () => {
-        let flight = DOM.elid('flight-number').value;
-        // Write transaction
-
-        console.log("clicked!!");
-        //TODO: Call fetch flight status
+        let flight = Number(statusSel.value);
+        
+        flightSuretyApp.methods.fetchFlightStatus(airline, flight, Date.now()).send({
+            from: passenger
+        });
     });
 
+    //Display the change in status onto the dApp
+    flightSuretyApp.events.FlightStatusInfo(
+        { fromblock: 'latest' },
+        async (err, ev) => {
+            if (err) console.log(err);
+            else {
+                console.log(ev.returnValues);
+                let str = `Flight ${statusSel.value}:`;
+                let status = ev.returnValues['3'];
+
+                switch (status) {
+                    case 0:
+                        str += " status is unknown.";
+                        break;
+                    case 10:
+                        str += " on time.";
+                        break;
+                    case 20:
+                        str += " delayed due to airline,"
+                            + " respective insurees will be credited.";
+                        break;
+                    case 30:
+                        str += " delayed due to weather.";
+                        break;
+                    case 40:
+                        str += " delayed due to technical error.";
+                        break;
+                    case 50:
+                        str += " status is other."
+                        break;
+                    default:
+                        str += " incorrect status code.";
+                        break;
+                }
+
+                DOM.elid("flight-status").append(DOM.h5(str));
+            }
+        }
+    );
 })();
 
 
