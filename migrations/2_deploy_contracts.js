@@ -26,9 +26,7 @@ const oracles = [
     '0x4Bf3191Be112D04E924f0d2419E0C230E2C7876F',
     '0x736C589d68204ed004f1E02Ba3312Aa1D0439E29'
 ]
-
 module.exports = async (deployer) => {
-
     await deployer.deploy(FlightSuretyData);
     await deployer.deploy(FlightSuretyApp, FlightSuretyData.address);
 
@@ -63,4 +61,5 @@ module.exports = async (deployer) => {
     }
     fs.writeFileSync(__dirname + '/../src/dapp/config.json', JSON.stringify(config, null, '\t'), 'utf-8');
     fs.writeFileSync(__dirname + '/../src/server/config.json', JSON.stringify(config, null, '\t'), 'utf-8');
+
 }

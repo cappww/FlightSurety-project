@@ -28,6 +28,11 @@ contract FlightSuretyData {
         contractOwner = msg.sender;
     }
 
+    function setFlightStatus(uint flight, uint256 timestamp, uint8 status) external
+    {
+        flights[flight].updatedTimestamp = timestamp;
+        flights[flight].statusCode = status;
+    }
 
    /**
     * @dev Buy insurance for a flight

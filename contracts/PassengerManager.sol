@@ -37,17 +37,6 @@ contract PassengerManager {
         return getFlightSuretyData().getFlightInfo(flightNum);
     }
 
-    //This is a fake function, the real one is located in Oracle Manager
-    function fetchFlightStatus
-    (
-        address airline,
-        uint flight,
-        uint timestamp
-    ) external
-    {
-        emit FlightStatusInfo(airline, flight, timestamp, 20);
-    }
-
     function() external payable {}
 }
 
