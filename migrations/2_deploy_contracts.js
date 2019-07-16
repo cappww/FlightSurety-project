@@ -29,7 +29,6 @@ const oracles = [
 
 module.exports = async(deployer) => {
 
-    let firstAirline = '0x01839bE1cCA5D19F223Aa3eFD6794Ec4ddb02e18';
     await deployer.deploy(FlightSuretyData);
     await deployer.deploy(FlightSuretyApp, FlightSuretyData.address);
 
@@ -47,6 +46,13 @@ module.exports = async(deployer) => {
 
     fs.writeFileSync(__dirname + '/../src/server/oracle-indices.json', JSON.stringify(oracleIndices, null, '\t'), 'utf-8');
     
+    //Flights would be registered from the AirlineManager Contract
+    let dataInstace = await FlightSuretyData.deployed();
+    let flights = db.flights;
+    flights.forEach(async (flight) => {
+        await dataInstace.registerFlight(flight);
+        console.log(flight, "Registered");
+    });
            
     let config = {
         localhost: {
@@ -57,6 +63,4 @@ module.exports = async(deployer) => {
     }
     fs.writeFileSync(__dirname + '/../src/dapp/config.json',JSON.stringify(config, null, '\t'), 'utf-8');
     fs.writeFileSync(__dirname + '/../src/server/config.json',JSON.stringify(config, null, '\t'), 'utf-8');
-           
-   
 }
