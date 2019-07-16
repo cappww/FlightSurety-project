@@ -8,9 +8,40 @@ const db = require('../server/db.json');
 let config = Config['localhost'];
 let web3 = new Web3(new Web3.providers.WebsocketProvider(config.url.replace('http', 'ws')));
 const flightSuretyApp = web3.eth.Contract(FlightSuretyApp.abi, config.appAddress);
+let web3Provider = null;
+
+
 
 
 (async() => {
+    if (window.ethereum) {
+        web3Provider = window.ethereum;
+        try {
+            await window.ethereum.enable();
+        } catch (error) {
+            console.error("User denied account access")
+        }
+    }
+    else if (window.web3) {
+        web3Provider = window.web3.currentProvider;
+    }
+    else {
+        web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
+    }
+
+    let getMetaMaskID = (async() => {
+        web3 = new Web3(web3Provider);
+        let metamaskID = "";
+        await web3.eth.getAccounts((err, res) => {
+            if(err) console.log(err);
+            else {
+                metamaskID = res[0];
+                return res[0];
+            }
+        });
+        return metamaskID;
+    });
+    
 
     //Adds each flight number into the options of the selector
     let selector = DOM.elid("selector");
@@ -28,9 +59,7 @@ const flightSuretyApp = web3.eth.Contract(FlightSuretyApp.abi, config.appAddress
         lbl.innerText = etherRange.value;
     }
 
-    let passenger = '0x667F2761d1030c473729fAe340C2A343663c2459';
-
-    let isOperational = await flightSuretyApp.methods.isOperational().call({ from: passenger });
+    let isOperational = await flightSuretyApp.methods.isOperational().call({ from: await getMetaMaskID() });
     console.log("isOperational:", isOperational);
     display('Operational Status', 'Check if contract is operational',
         [{
@@ -38,25 +67,22 @@ const flightSuretyApp = web3.eth.Contract(FlightSuretyApp.abi, config.appAddress
             value: isOperational
         }]
     );
+    
 
     DOM.elid('insure-flight').addEventListener('click', async() => {
-        
-        //TODO: change the from value to whomever is calling the function (metamask??)
         flightSuretyApp.methods.buyInsurance(Number(selector.value)).send({
-            from: passenger, 
+            from: await getMetaMaskID(),
             value: web3.utils.toWei(etherRange.value, "ether"),
             gas: 6721975
         });
-        
     });
 
     let airline = '0x01839bE1cCA5D19F223Aa3eFD6794Ec4ddb02e18';
-
-    DOM.elid('submit-oracle').addEventListener('click', () => {
+    DOM.elid('submit-oracle').addEventListener('click', async() => {
         let flight = Number(statusSel.value);
         
         flightSuretyApp.methods.fetchFlightStatus(airline, flight, Date.now()).send({
-            from: passenger
+            from: await getMetaMaskID()
         });
     });
 
@@ -66,7 +92,6 @@ const flightSuretyApp = web3.eth.Contract(FlightSuretyApp.abi, config.appAddress
         async (err, ev) => {
             if (err) console.log(err);
             else {
-                console.log(ev.returnValues);
                 let str = `Flight ${statusSel.value}:`;
                 let status = ev.returnValues['3'];
 
