@@ -50,12 +50,8 @@ contract FlightSuretyApp is OracleManager, PassengerManager {
     )
     internal
     {
-        flightSuretyData.setFlightStatus(flight, timestamp, statusCode);
+        //flightSuretyData.setFlightStatus(flight, timestamp, statusCode);
         //TODO: If the status is deplayed due to airline, call the creditInsurees function
     }
 }
 
-//Contract Data Interface
-contract FlightSuretyData {
-    function setFlightStatus(uint, uint256, uint8) external;
-}

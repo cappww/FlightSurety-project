@@ -9,9 +9,10 @@
   "scripts": {
     "test": "truffle test ./test/flightSuretyTest.js",
     "dapp": "webpack-dev-server --mode development --config webpack.config.dapp.js",
+    "server": "node ./src/server/server.js",
     "dapp:prod": "webpack --mode production  --config webpack.config.dapp.js",
-    "server": "rm -rf ./build/server && webpack --config webpack.config.server.js",
-    "dev": "npm run server & npm run dapp"
+    "dev": "npm run server & npm run dapp",
+    "compile": "rm -rf build && truffle compile"
   },
   "author": "",
   "license": "ISC",
