@@ -3,7 +3,6 @@ const FlightSuretyData = artifacts.require("FlightSuretyData");
 const fs = require('fs');
 const Web3 = require('web3');
 const web3 = new Web3();
-const db = require('../src/server/db.json')
 
 const oracles = [
     '0x9c7401407281f299C2D28384C953B7d6D1Ea10A3',
@@ -27,9 +26,7 @@ const oracles = [
     '0x4Bf3191Be112D04E924f0d2419E0C230E2C7876F',
     '0x736C589d68204ed004f1E02Ba3312Aa1D0439E29'
 ]
-
-module.exports = async(deployer) => {
-
+module.exports = async (deployer) => {
     await deployer.deploy(FlightSuretyData);
     await deployer.deploy(FlightSuretyApp, FlightSuretyData.address);
 
@@ -46,7 +43,7 @@ module.exports = async(deployer) => {
     }
 
     fs.writeFileSync(__dirname + '/../src/server/oracle-indices.json', JSON.stringify(oracleIndices, null, '\t'), 'utf-8');
-    
+
     //Flights would be registered from the AirlineManager Contract
     let dataInstace = await FlightSuretyData.deployed();
     let flights = db.flights;
@@ -54,7 +51,7 @@ module.exports = async(deployer) => {
         await dataInstace.registerFlight(flight);
         console.log(flight, "Registered");
     });
-           
+
     let config = {
         localhost: {
             url: 'http://localhost:7545',
@@ -62,6 +59,7 @@ module.exports = async(deployer) => {
             appAddress: FlightSuretyApp.address
         }
     }
-    fs.writeFileSync(__dirname + '/../src/dapp/config.json',JSON.stringify(config, null, '\t'), 'utf-8');
-    fs.writeFileSync(__dirname + '/../src/server/config.json',JSON.stringify(config, null, '\t'), 'utf-8');
+    fs.writeFileSync(__dirname + '/../src/dapp/config.json', JSON.stringify(config, null, '\t'), 'utf-8');
+    fs.writeFileSync(__dirname + '/../src/server/config.json', JSON.stringify(config, null, '\t'), 'utf-8');
+
 }
