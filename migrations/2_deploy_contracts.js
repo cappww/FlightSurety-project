@@ -3,6 +3,7 @@ const FlightSuretyData = artifacts.require("FlightSuretyData");
 const fs = require('fs');
 const Web3 = require('web3');
 const web3 = new Web3();
+const db = require('../src/dapp/db.json');
 
 const oracles = [
     '0x9c7401407281f299C2D28384C953B7d6D1Ea10A3',
