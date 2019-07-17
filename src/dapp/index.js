@@ -41,8 +41,12 @@ let web3Provider = null;
         });
         return metamaskID;
     });
-    
 
+    //Display the account number of the current user
+    let header = DOM.elid("header");
+    header.innerText += " " + (await getMetaMaskID()).slice(0, 10) + "...";
+
+    
     //Adds each flight number into the options of the selector
     let selector = DOM.elid("selector");
     let statusSel = DOM.elid("status-selector");
@@ -73,16 +77,31 @@ let web3Provider = null;
             from: await getMetaMaskID(),
             value: web3.utils.toWei(etherRange.value, "ether"),
             gas: 6721975
-        });
+        }).then(console.log(`Flight ${selector.value} Insured for ${etherRange.value} ether`));
     });
 
     let airline = '0x01839bE1cCA5D19F223Aa3eFD6794Ec4ddb02e18';
     DOM.elid('submit-oracle').addEventListener('click', async() => {
         let flight = Number(statusSel.value);
         
-        flightSuretyApp.methods.fetchFlightStatus(airline, flight, Date.now()).send({
+        await flightSuretyApp.methods.fetchFlightStatus(airline, flight, Date.now()).send({
             from: await getMetaMaskID()
         });
+    });
+
+    let balance = DOM.elid('balance');
+    let amount = await flightSuretyApp.methods.getPendingWithdrawal().call({from: await getMetaMaskID()});
+    amount = web3.utils.fromWei(amount.toString(), 'ether');
+    balance.innerText = `Your balance is ${amount} ether`;
+
+    DOM.elid('credit').addEventListener('click', async() => {
+        flightSuretyApp.methods.withdrawCredit().send({
+            from: await getMetaMaskID()
+        });
+        amount = await flightSuretyApp.methods.getPendingWithdrawal().call({ from: await getMetaMaskID() });
+        amount = web3.utils.fromWei(amount.toString(), 'ether');
+        balance.innerText = `Your balance is ${amount} ether`;
+        console.log(`${amount} ether has been sent to you`);
     });
 
     //Display the change in status onto the dApp
@@ -102,8 +121,10 @@ let web3Provider = null;
                         str += " on time.";
                         break;
                     case 20:
-                        str += " delayed due to airline,"
-                            + " respective insurees will be credited.";
+                        str += " delayed due to airline, respective insurees will be credited.";
+                        amount = await flightSuretyApp.methods.getPendingWithdrawal().call({ from: await getMetaMaskID() });
+                        amount = web3.utils.fromWei(amount.toString(), 'ether');
+                        balance.innerText = `Your balance is ${amount} ether`;
                         break;
                     case 30:
                         str += " delayed due to weather.";
@@ -119,7 +140,7 @@ let web3Provider = null;
                         break;
                 }
 
-                DOM.elid("flight-status").append(DOM.h5(str));
+                DOM.elid("flight-stat-sec").appendChild(DOM.h5(str));
             }
         }
     );

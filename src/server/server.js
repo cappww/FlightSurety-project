@@ -8,7 +8,6 @@ let config = Config['localhost'];
 let web3 = new Web3(new Web3.providers.WebsocketProvider(config.url));
 web3.eth.defaultAccount = web3.eth.accounts[0];
 let oracles = require('./oracle-indices.json');
-//console.log(oracles);
 
 let airline = '0x01839bE1cCA5D19F223Aa3eFD6794Ec4ddb02e18';
 
@@ -72,7 +71,7 @@ class Server {
                         ev.returnValues.timestamp.toNumber(), "\n ",
                     )
                     let index = ev.returnValues.index;
-                    let status = Math.floor(Math.random() * 6) * 10;
+                    let status = 20;//Math.floor(Math.random() * 6) * 10;
 
                     for (const address in oracles) {
                         if (oracles.hasOwnProperty(address)) {
@@ -85,7 +84,10 @@ class Server {
                                         ev.returnValues.flight,
                                         ev.returnValues.timestamp,
                                         status
-                                    ).send({from: address});
+                                    ).send({
+                                        from: address,
+                                        gas: 6721975
+                                    });
                                 }
                             }
                         }

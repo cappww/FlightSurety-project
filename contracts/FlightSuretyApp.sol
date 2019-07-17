@@ -41,7 +41,7 @@ contract FlightSuretyApp {
         flightSuretyData.buyInsurance(flightNum, msg.sender, msg.value);
     }
 
-    function creditInsurees(uint flightNum) external
+    function creditInsurees(uint flightNum) internal
     {
         address[] memory passengers = flightSuretyData.getFlightPassengers(flightNum);
         for (uint i = 0; i < passengers.length; i++) {
@@ -58,6 +58,11 @@ contract FlightSuretyApp {
     function getFlightInfo(uint flightNum) public view returns(bool, uint8, uint256, address, address[] memory)
     {
         return flightSuretyData.getFlightInfo(flightNum);
+    }
+
+    function getPendingWithdrawal() public view returns(uint)
+    {
+        return flightSuretyData.getPendingWithdrawal(msg.sender);
     }
 
 
@@ -188,7 +193,7 @@ contract FlightSuretyApp {
     ) internal
     {
         flightSuretyData.setFlightStatus(flight, timestamp, statusCode);
-        //creditInsurees(flight);
+        creditInsurees(flight);
     }
 
     function getRandomIndex
@@ -219,4 +224,5 @@ contract FlightSuretyData {
     function creditInsuree(uint, address) external;
     function withdrawCredit(address) external returns(uint);
     function setFlightStatus(uint, uint256, uint8) external;
+    function getPendingWithdrawal(address) public view returns(uint);
 }

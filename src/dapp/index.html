@@ -20,6 +20,7 @@
     </nav>
 
     <main class="container" id="main">
+        <h1 id="header">Hello, </h1>
         <div id="display-wrapper" class="top-20"></div>
         <div id="flight-selector">
             <section>
@@ -41,10 +42,18 @@
             </section>
         </div>
         <div id="flight-status">
-            <h2>Flight Status</h2>
-            <h5>Fetch a flight's status</h5>
-            <select id="status-selector" style="margin-left: 3em"></select>
-            <btn class="btn btn-primary" id="submit-oracle" style="margin-left: 3em">Submit to Oracles</btn>
+            <section id="flight-stat-sec">
+                <h2>Flight Status</h2>
+                <h5>Fetch a flight's status</h5>
+                <select id="status-selector" style="margin-left: 3em"></select>
+                <btn class="btn btn-primary" id="submit-oracle" style="margin-left: 3em">Submit to Oracles</btn>
+            </section>
+        </div>
+        <div id="withdraw-credit">
+            <h2>Withraw Your Credit</h2>
+            <section>
+                <h5 id="balance"></h5>
+            <btn class="btn btn-primary" id="credit" style="margin-left: 3em">Credit to Your Account</btn>
         </div>
     </main>
 
