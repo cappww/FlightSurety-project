@@ -6,7 +6,9 @@ contract FlightSuretyData {
     using SafeMath for uint256;
 
     //DATA VARIABLES
+    bool private operational;
     address private contractOwner;
+    address private authorizedCaller;
 
     struct Flight {
         bool isRegistered;
@@ -19,6 +21,19 @@ contract FlightSuretyData {
     mapping(uint => Flight) private flights;
     mapping(address => uint) pendingWithdrawals;
 
+    //MODIFIERS
+    modifier requireContractOwner()
+    {
+        require(msg.sender == contractOwner, "Caller is not contract owner");
+        _;
+    }
+
+    modifier requireAuthorizedCaller()
+    {
+        require(msg.sender == authorizedCaller, "This caller is not authorized");
+        _;
+    }
+
     /**
     * @dev Constructor
     *      The deploying account becomes contractOwner
@@ -26,6 +41,59 @@ contract FlightSuretyData {
     constructor() public
     {
         contractOwner = msg.sender;
+        operational = true;
+        authorizedCaller = address(0);
+    }
+
+    function isOperational() external view returns(bool)
+    {
+        return operational;
+    }
+
+    function setOperatingStatus(bool mode) external requireContractOwner
+    {
+        operational = mode;
+    }
+
+    function authorizeCaller(address caller) external
+    {
+        require(msg.sender == contractOwner, "Only the contract owner can call this function");
+        authorizedCaller = caller;
+    }
+
+    /*
+     * Airline Section
+    */
+
+    mapping(address => bool) private registeredAirlines;
+    mapping(address => bool) private memberAirlines; //Airlines that are registered and paid ante
+    uint private airlineCount;
+
+    function registerAirline(address newAirline) external
+    {
+        registeredAirlines[newAirline] = true;
+        airlineCount++;
+    }
+
+    function payAnte(address newAirline) external
+    {
+        memberAirlines[newAirline] = true;
+    }
+
+    function isAirlineRegistered(address airline) external view returns(bool)
+    {
+        return registeredAirlines[airline];
+    }
+
+    function isAntePaid(address airline) external view returns(bool)
+    {
+        require(registeredAirlines[airline], "This address is not a registered airline");
+        return memberAirlines[airline];
+    }
+
+    function getAirlineCount() external view returns(uint)
+    {
+        return airlineCount;
     }
 
     function setFlightStatus(uint flight, uint256 timestamp, uint8 status) external
@@ -33,6 +101,15 @@ contract FlightSuretyData {
         flights[flight].updatedTimestamp = timestamp;
         flights[flight].statusCode = status;
     }
+
+    function registerFlight(uint flightNum) external
+    {
+        flights[flightNum] = Flight(true, 0, now, msg.sender, new address[](0));
+    }
+
+    /*
+     * Passenger Section
+    */
 
    /**
     * @dev Buy insurance for a flight
@@ -84,11 +161,6 @@ contract FlightSuretyData {
         uint amount = pendingWithdrawals[sender];
         pendingWithdrawals[sender] = 0;
         return amount;
-    }
-
-    //This is a function used for testing the passengers contracts
-    function registerFlight(uint flightNum) public {
-        flights[flightNum] = Flight(true, 0, now, msg.sender, new address[](0));
     }
 }
 

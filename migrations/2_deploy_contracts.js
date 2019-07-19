@@ -26,13 +26,26 @@ const oracles = [
     '0xe645aF82A2131c0961b304d4d220b26624796169',
     '0x4Bf3191Be112D04E924f0d2419E0C230E2C7876F',
     '0x736C589d68204ed004f1E02Ba3312Aa1D0439E29'
-]
+];
+
+let contractOwner = "0x01839bE1cCA5D19F223Aa3eFD6794Ec4ddb02e18" 
+//'0xC485652B083fBC268FaE28b9c26Bb0CccD761679';
 module.exports = async (deployer) => {
     await deployer.deploy(FlightSuretyData);
     await deployer.deploy(FlightSuretyApp, FlightSuretyData.address);
 
-    // Loop through oracles, add each one to the deployed app
+    //Flights would be registered from the AirlineManager Contract
+    let dataInstace = await FlightSuretyData.deployed();
+    // let flights = db.flights;
+    // flights.forEach(async (flight) => {
+    //     await dataInstace.registerFlight(flight);
+    //     console.log(flight, "Registered");
+    // });
+
+
     let instance = await FlightSuretyApp.deployed();
+    await dataInstace.authorizeCaller(instance.address);
+    // Loop through oracles, add each one to the deployed app
     let oracleIndices = {};
     console.log("Oracles");
     for (let i = 0; i < oracles.length; i++) {
@@ -45,13 +58,6 @@ module.exports = async (deployer) => {
 
     fs.writeFileSync(__dirname + '/../src/server/oracle-indices.json', JSON.stringify(oracleIndices, null, '\t'), 'utf-8');
 
-    //Flights would be registered from the AirlineManager Contract
-    let dataInstace = await FlightSuretyData.deployed();
-    let flights = db.flights;
-    flights.forEach(async (flight) => {
-        await dataInstace.registerFlight(flight);
-        console.log(flight, "Registered");
-    });
 
     let config = {
         localhost: {

@@ -9,8 +9,15 @@ contract FlightSuretyApp {
 
     address payable private contractOwner;          // Account used to deploy contract
     FlightSuretyData private flightSuretyData;      // Instance of the data contract
+    address payable private contractAddress;
 
     //MODIFIERS
+    modifier requireIsOperational()
+    {
+        // Modify to call data contract's status
+        require(flightSuretyData.isOperational(), "Contract is currently not operational");
+        _;
+    }
 
     //CONSTRUCTOR
 
@@ -21,7 +28,9 @@ contract FlightSuretyApp {
     constructor(address dataContract) public
     {
         contractOwner = msg.sender;
+        contractAddress = address(uint160(address(this)));
         flightSuretyData = FlightSuretyData(dataContract);
+        flightSuretyData.registerAirline(address(0x01839bE1cCA5D19F223Aa3eFD6794Ec4ddb02e18));
     }
 
     function isOperational() external pure returns(bool)
@@ -31,7 +40,87 @@ contract FlightSuretyApp {
 
 
     /*
-     *  Passenger Functions
+     * Airline Section
+    */
+
+    struct Vote {
+        mapping(address => bool) memberVoted;
+        uint votes;
+    }
+    mapping(address => Vote) elections;
+
+    event AirlineAdded(address airline);
+    event MemberVoted(address member, uint votes);
+
+    modifier requireRegisteredAirline()
+    {
+        require(flightSuretyData.isAirlineRegistered(msg.sender), "This address must be a registered airline to call this function");
+        _;
+    }
+
+    modifier requireAmount()
+    {
+        require(msg.value >= 10 ether, "You have not given the correct amount of 10 ether");
+        _;
+    }
+
+    modifier requireMemberAirline()
+    {
+        require(flightSuretyData.isAntePaid(msg.sender), "This airline has not paid the Ante yet");
+        _;
+    }
+
+    function isAirlineRegistered(address airline) public view returns(bool)
+    {
+        return flightSuretyData.isAirlineRegistered(airline);
+    }
+
+    function payAnte()
+        external
+        payable
+        requireRegisteredAirline
+        requireAmount
+    {
+        contractOwner.transfer(msg.value);
+        flightSuretyData.payAnte(msg.sender);
+    }
+
+    function registerAirline(address newAirline)
+        external
+        requireMemberAirline
+        returns(bool success, uint256 votes)
+    {
+        if(flightSuretyData.getAirlineCount() < 4) {
+            flightSuretyData.registerAirline(newAirline);
+            emit AirlineAdded(newAirline);
+            return (true, 1);
+        }
+        if(elections[newAirline].memberVoted[msg.sender]){
+            return (false, elections[newAirline].votes);
+        } else {
+            elections[newAirline].votes++;
+            elections[newAirline].memberVoted[msg.sender] = true;
+            uint airlineCount = flightSuretyData.getAirlineCount();
+            if(elections[newAirline].votes >= airlineCount/2) {
+                flightSuretyData.registerAirline(newAirline);
+                emit AirlineAdded(newAirline);
+                return (true, elections[newAirline].votes);
+            } else {
+                return (false, elections[newAirline].votes);
+            }
+
+        }
+    }
+
+    function registerFlight(uint flight) external requireMemberAirline
+    {
+        flightSuretyData.registerFlight(flight);
+    }
+
+
+
+    /*
+     *  Passenger Section
     */
 
     function buyInsurance(uint flightNum) external payable
@@ -68,7 +157,7 @@ contract FlightSuretyApp {
 
 
     /*
-     *  Oracle Functions
+     *  Oracle Section
     */
 
     uint256 public constant REGISTRATION_FEE = 1 ether;
@@ -218,6 +307,15 @@ contract FlightSuretyApp {
 
 //Contract Data Interface
 contract FlightSuretyData {
+    function isOperational() external view returns(bool);
+    //Airline Functions
+    function registerAirline(address) external;
+    function payAnte(address) external;
+    function isAirlineRegistered(address) external view returns(bool);
+    function isAntePaid(address) external view returns(bool);
+    function getAirlineCount() external view returns(uint);
+    function registerFlight(uint) external;
+    //Passenger
     function buyInsurance(uint, address, uint) external;
     function getFlightInfo(uint) public view returns(bool, uint8, uint256, address, address[] memory);
     function getFlightPassengers(uint) public view returns(address[] memory);

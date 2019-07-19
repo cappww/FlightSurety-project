@@ -42,6 +42,12 @@ let web3Provider = null;
         return metamaskID;
     });
 
+    async function getBalance() {
+        let amount = await flightSuretyApp.methods.getPendingWithdrawal().call({ from: await getMetaMaskID() });
+        amount = web3.utils.fromWei(amount.toString(), 'ether');
+        return amount;
+    }
+
     //Display the account number of the current user
     let header = DOM.elid("header");
     header.innerText += " " + (await getMetaMaskID()).slice(0, 10) + "...";
@@ -77,7 +83,8 @@ let web3Provider = null;
             from: await getMetaMaskID(),
             value: web3.utils.toWei(etherRange.value, "ether"),
             gas: 6721975
-        }).then(console.log(`Flight ${selector.value} Insured for ${etherRange.value} ether`));
+        })
+        console.log(`Flight ${selector.value} Insured for ${etherRange.value} ether`);
     });
 
     let airline = '0x01839bE1cCA5D19F223Aa3eFD6794Ec4ddb02e18';
@@ -90,18 +97,17 @@ let web3Provider = null;
     });
 
     let balance = DOM.elid('balance');
-    let amount = await flightSuretyApp.methods.getPendingWithdrawal().call({from: await getMetaMaskID()});
-    amount = web3.utils.fromWei(amount.toString(), 'ether');
+    let amount = await getBalance();
     balance.innerText = `Your balance is ${amount} ether`;
 
     DOM.elid('credit').addEventListener('click', async() => {
+        amount = await getBalance();
+        console.log(`${amount} ether has been sent to you`);
         flightSuretyApp.methods.withdrawCredit().send({
             from: await getMetaMaskID()
         });
-        amount = await flightSuretyApp.methods.getPendingWithdrawal().call({ from: await getMetaMaskID() });
-        amount = web3.utils.fromWei(amount.toString(), 'ether');
+        amount = await getBalance();
         balance.innerText = `Your balance is ${amount} ether`;
-        console.log(`${amount} ether has been sent to you`);
     });
 
     //Display the change in status onto the dApp
@@ -122,8 +128,7 @@ let web3Provider = null;
                         break;
                     case 20:
                         str += " delayed due to airline, respective insurees will be credited.";
-                        amount = await flightSuretyApp.methods.getPendingWithdrawal().call({ from: await getMetaMaskID() });
-                        amount = web3.utils.fromWei(amount.toString(), 'ether');
+                        amount = await getBalance();
                         balance.innerText = `Your balance is ${amount} ether`;
                         break;
                     case 30:
