@@ -34,6 +34,12 @@ contract FlightSuretyData {
         _;
     }
 
+    modifier requireIsOperational()
+    {
+        require(operational, "The data contract is not operational");
+        _;
+    }
+
     /**
     * @dev Constructor
     *      The deploying account becomes contractOwner
@@ -55,7 +61,7 @@ contract FlightSuretyData {
         operational = mode;
     }
 
-    function authorizeCaller(address caller) external
+    function authorizeCaller(address caller) external requireContractOwner
     {
         require(msg.sender == contractOwner, "Only the contract owner can call this function");
         authorizedCaller = caller;
@@ -69,40 +75,57 @@ contract FlightSuretyData {
     mapping(address => bool) private memberAirlines; //Airlines that are registered and paid ante
     uint private airlineCount;
 
-    function registerAirline(address newAirline) external
+    function registerAirline(address newAirline)
+        external
+        requireIsOperational
     {
         registeredAirlines[newAirline] = true;
         airlineCount++;
     }
 
-    function payAnte(address newAirline) external
+    function payAnte(address newAirline)
+        external
+        requireIsOperational
     {
         memberAirlines[newAirline] = true;
     }
 
-    function isAirlineRegistered(address airline) external view returns(bool)
+    function isAirlineRegistered(address airline)
+        external
+        view
+        returns(bool)
     {
         return registeredAirlines[airline];
     }
 
-    function isAntePaid(address airline) external view returns(bool)
+    function isAntePaid(address airline)
+        external
+        view
+        returns(bool)
     {
         require(registeredAirlines[airline], "This address is not a registered airline");
         return memberAirlines[airline];
     }
 
-    function getAirlineCount() external view returns(uint)
+    function getAirlineCount()
+        external
+        view
+        returns(uint)
     {
         return airlineCount;
     }
 
-    function setFlightStatus(uint flight, uint256 timestamp, uint8 status) external
+    function setFlightStatus(uint flight, uint256 timestamp, uint8 status)
+        external
+        requireIsOperational
     {
         flights[flight].updatedTimestamp = timestamp;
         flights[flight].statusCode = status;
     }
 
-    function registerFlight(uint flightNum) external
+    function registerFlight(uint flightNum)
+        external
+        requireIsOperational
     {
         flights[flightNum] = Flight(true, 0, now, msg.sender, new address[](0));
     }
@@ -115,7 +138,10 @@ contract FlightSuretyData {
     * @dev Buy insurance for a flight
     *
     */
-    function buyInsurance(uint flightNum, address sender, uint amount) external payable
+    function buyInsurance(uint flightNum, address sender, uint amount)
+        external
+        payable
+        requireIsOperational
     {
         flights[flightNum].insuredPassengers.push(sender);
         flights[flightNum].amountsInsured[sender] = amount;
@@ -124,14 +150,20 @@ contract FlightSuretyData {
     /**
      *  @dev Credits payouts to insurees
     */
-    function creditInsuree(uint flightNum, address passenger) external
+    function creditInsuree(uint flightNum, address passenger)
+        external
+        requireIsOperational
     {
         uint amount = flights[flightNum].amountsInsured[passenger];
         flights[flightNum].amountsInsured[passenger] = 0;
         pendingWithdrawals[passenger] = (amount + amount/2);
     }
 
-    function getFlightInfo(uint flightNum) public view returns(bool, uint8, uint256, address, address[] memory){
+    function getFlightInfo(uint flightNum)
+        external
+        view
+        returns(bool, uint8, uint256, address, address[] memory)
+    {
         return (
             flights[flightNum].isRegistered,
             flights[flightNum].statusCode,
@@ -141,22 +173,34 @@ contract FlightSuretyData {
         );
     }
 
-    function getFlightPassengers(uint flightNum) public view returns(address[] memory)
+    function getFlightPassengers(uint flightNum)
+        public
+        view
+        returns(address[] memory)
     {
         return flights[flightNum].insuredPassengers;
     }
 
-    function getAmountInfo(uint flightNum, address passenger) public view returns(uint)
+    function getAmountInfo(uint flightNum, address passenger)
+        public
+        view
+        returns(uint)
     {
         return flights[flightNum].amountsInsured[passenger];
     }
 
-    function getPendingWithdrawal(address passenger) public view returns(uint)
+    function getPendingWithdrawal(address passenger)
+        public
+        view
+        returns(uint)
     {
         return pendingWithdrawals[passenger];
     }
 
-    function withdrawCredit(address sender) external returns(uint)
+    function withdrawCredit(address sender)
+        external
+        requireIsOperational
+        returns(uint)
     {
         uint amount = pendingWithdrawals[sender];
         pendingWithdrawals[sender] = 0;

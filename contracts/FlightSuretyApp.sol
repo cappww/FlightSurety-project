@@ -70,7 +70,10 @@ contract FlightSuretyApp {
         _;
     }
 
-    function isAirlineRegistered(address airline) public view returns(bool)
+    function isAirlineRegistered(address airline)
+        external
+        view
+        returns(bool)
     {
         return flightSuretyData.isAirlineRegistered(airline);
     }
@@ -78,6 +81,7 @@ contract FlightSuretyApp {
     function payAnte()
         external
         payable
+        requireIsOperational
         requireRegisteredAirline
         requireAmount
     {
@@ -123,7 +127,10 @@ contract FlightSuretyApp {
      *  Passenger Section
     */
 
-    function buyInsurance(uint flightNum) external payable
+    function buyInsurance(uint flightNum)
+        external
+        payable
+        requireIsOperational
     {
         require(msg.value <= 1 ether, "You cannot insure more than 1 ether");
         contractOwner.transfer(msg.value);
@@ -140,25 +147,32 @@ contract FlightSuretyApp {
 
     function withdrawCredit() public
     {
+        require(getPendingWithdrawal() > 0, "You must have a balance greater than 0");
         uint amount = flightSuretyData.withdrawCredit(msg.sender);
         msg.sender.transfer(amount);
     }
 
-    function getFlightInfo(uint flightNum) public view returns(bool, uint8, uint256, address, address[] memory)
+    function getFlightInfo(uint flightNum)
+        public
+        view
+        returns(bool, uint8, uint256, address, address[] memory)
     {
         return flightSuretyData.getFlightInfo(flightNum);
     }
 
-    function getPendingWithdrawal() public view returns(uint)
+    function getPendingWithdrawal()
+        public
+        view
+        returns(uint)
     {
         return flightSuretyData.getPendingWithdrawal(msg.sender);
     }
 
 
-
     /*
      *  Oracle Section
     */
+
 
     uint256 public constant REGISTRATION_FEE = 1 ether;
     uint256 private constant MIN_RESPONSES = 3;
@@ -206,7 +220,10 @@ contract FlightSuretyApp {
 
 
     // Register an oracle with the contract
-    function registerOracle() external payable
+    function registerOracle()
+        external
+        payable
+        requireIsOperational
     {
         // Require registration fee
         require(msg.value >= REGISTRATION_FEE, "Registration fee is required");
@@ -289,17 +306,15 @@ contract FlightSuretyApp {
     (
         address account
     )
-    public returns (uint8)
+        public
+        returns (uint8)
     {
         uint8 maxValue = 10;
-
         // Pseudo random number...the incrementing nonce adds variation
         uint8 random = uint8(uint256(keccak256(abi.encodePacked(blockhash(block.number - nonce++), account))) % maxValue);
-
         if (nonce > 250) {
             nonce = 0;  // Can only fetch blockhashes for last 256 blocks so we adapt
         }
-
         return random;
     }
 
