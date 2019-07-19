@@ -71,7 +71,7 @@ class Server {
                         ev.returnValues.timestamp.toNumber(), "\n ",
                     )
                     let index = ev.returnValues.index;
-                    let status = 20;//Math.floor(Math.random() * 6) * 10;
+                    let status = Math.floor(Math.random() * 6) * 10;
 
                     for (const address in oracles) {
                         if (oracles.hasOwnProperty(address)) {
