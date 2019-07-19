@@ -140,7 +140,6 @@ contract FlightSuretyData {
     */
     function buyInsurance(uint flightNum, address sender, uint amount)
         external
-        payable
         requireIsOperational
     {
         flights[flightNum].insuredPassengers.push(sender);

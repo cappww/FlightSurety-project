@@ -105,6 +105,7 @@ module.exports = async (callback) => {
     } catch (error) {
         console.log(error);
     }
+    console.log("Contract Balance", await web3.utils.fromWei(await web3.eth.getBalance(flightSuretyApp.address), 'ether'));
     
     
     callback();

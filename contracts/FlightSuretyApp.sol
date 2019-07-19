@@ -9,7 +9,6 @@ contract FlightSuretyApp {
 
     address payable private contractOwner;          // Account used to deploy contract
     FlightSuretyData private flightSuretyData;      // Instance of the data contract
-    address payable private contractAddress;
 
     //MODIFIERS
     modifier requireIsOperational()
@@ -28,7 +27,6 @@ contract FlightSuretyApp {
     constructor(address dataContract) public
     {
         contractOwner = msg.sender;
-        contractAddress = address(uint160(address(this)));
         flightSuretyData = FlightSuretyData(dataContract);
         flightSuretyData.registerAirline(address(0x01839bE1cCA5D19F223Aa3eFD6794Ec4ddb02e18));
     }
@@ -85,7 +83,7 @@ contract FlightSuretyApp {
         requireRegisteredAirline
         requireAmount
     {
-        contractOwner.transfer(msg.value);
+        address(this).transfer(msg.value);
         flightSuretyData.payAnte(msg.sender);
     }
 
@@ -122,10 +120,10 @@ contract FlightSuretyApp {
     }
 
 
-
     /*
      *  Passenger Section
     */
+
 
     function buyInsurance(uint flightNum)
         external
@@ -133,7 +131,7 @@ contract FlightSuretyApp {
         requireIsOperational
     {
         require(msg.value <= 1 ether, "You cannot insure more than 1 ether");
-        contractOwner.transfer(msg.value);
+        address(this).transfer(msg.value);
         flightSuretyData.buyInsurance(flightNum, msg.sender, msg.value);
     }
 
@@ -218,7 +216,6 @@ contract FlightSuretyApp {
         return indexes;
     }
 
-
     // Register an oracle with the contract
     function registerOracle()
         external
@@ -227,9 +224,8 @@ contract FlightSuretyApp {
     {
         // Require registration fee
         require(msg.value >= REGISTRATION_FEE, "Registration fee is required");
-
+        address(this).transfer(msg.value);
         uint8[3] memory indexes = generateIndexes(msg.sender);
-
         oracles[msg.sender] = Oracle({
             isRegistered: true,
             indexes: indexes
@@ -269,7 +265,7 @@ contract FlightSuretyApp {
         uint256 timestamp,
         uint8 statusCode
     )
-    external returns (uint)
+        external returns (uint)
     {
         require(
             (oracles[msg.sender].indexes[0] == index) ||
@@ -317,6 +313,8 @@ contract FlightSuretyApp {
         }
         return random;
     }
+
+    function () external payable {}
 
 }
 
